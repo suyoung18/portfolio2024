@@ -254,5 +254,29 @@ $('.box1').mouseleave(function(){
 
 
 
+                $('.img1 p').click(function(){
+
+                    let i = $(this).index()
+                    $('.sonbi').removeClass('oon')
+                    $('.sonbi').addClass('oon')
+                
+                    
+                    });
+            
+                    $('.botlogo img').click(function(){
+            
+                        let i = $(this).index()
+                        $('.sonbi').removeClass('oon')
+                        
+                    
+                        
+                        });
+
+
+
+
+
+
+
 })
 
