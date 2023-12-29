@@ -8,16 +8,18 @@
 
     <!-- 외부스타일시트연결 -->
     <link rel="stylesheet" href="style.css">
-<!-- 외부스크립트연결 -->
-<script src="js/js.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
 
 <!-- 폰트어썸 CDN -->
 <script src="https://kit.fontawesome.com/85ac904405.js" crossorigin="anonymous"></script>
 
 <!-- 제이궈리연결 -->
 <Script src="js/jquery-3.7.1.min.js"></Script>
+<!-- 외부스크립트연결 -->
+<script src="js/js.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 
-<!-- 자바스트립트 -->
+<!-- 자바스트립트 
         <script>
             $(function(){
                 $('.ex1').children('li').not('.li02').css({'border-right':'2px solid #747474'});
@@ -78,7 +80,7 @@ $('.listBox1').children('ul').css({'left':'416px'})
 
 
 
-        </script>
+        </script>-->
 <!--
 $('.left').children('i').click(function(){
 
@@ -105,6 +107,23 @@ $('.listBox1').children('ul').css({'right':'416px'})
                     <i class="fa fa-caret-down fa-stack-1x"></i>
                     <i class="fa fa-circle-thin fa-stack-1x"></i>
                 </span>
+
+                <div class="submenu">
+                    <ul>
+                        <li>사이트맵</li>
+
+                        <li>개인 정보 정책</li>
+
+                        <li>공포금지법</li>
+
+                        <li>미디어용</li>
+
+                        <li>예산 및 연간 보고서</li>
+
+                        <li>NASA 문의</li>
+                    </ul>
+                </div>
+
             </div>
 
             <div class="logo">
@@ -112,7 +131,9 @@ $('.listBox1').children('ul').css({'right':'416px'})
             </div>
 
             <div class="search">
-                <p>검색하기....</p>
+                <input id="name2" placeholder="검색하기...." autofocus>
+                <!-- <p>검색하기....</p> -->
+            
                 <i class="fa fa-search" aria-hidden="true"></i>
             </div>
         </div>
@@ -139,17 +160,38 @@ $('.listBox1').children('ul').css({'right':'416px'})
 
     <div class="box2">
         <div class="slide">
-            <strong>허블, 10억초 돌파</strong>
-            <p>허블은 1990년 4월 25일 우주 왕복선 디스커버리 호의 화물칸에서 배치되었으며... </p>
-            
+            <div class="eo">
+                <strong>허블, 10억초 돌파</strong>
+                <p>허블은 1990년 4월 25일 우주 왕복선 디스커버리 호의 화물칸에서 배치되었으며... </p>
+                
+            </div>
+            <div>
+                <strong>허블, 100억초 돌파</strong>
+                <p>허블은 1990년 4월 25일 우주 왕복선 디스커버리 호의 화물칸에서 배치되었으며... </p>
+                
+            </div>
+            <div>
+                <strong>허블, 108억초 돌파</strong>
+                <p>허블은 1990년 4월 25일 우주 왕복선 디스커버리 호의 화물칸에서 배치되었으며... </p>
+                
+            </div>
+            <div>
+                <strong>허블, 1060억초 돌파</strong>
+                <p>허블은 1990년 4월 25일 우주 왕복선 디스커버리 호의 화물칸에서 배치되었으며... </p>
+                
+            </div>
         </div>
 
 
         <div class="slide1">
             <div class="btn1">
-                <a href="#">
+                <div class="no">
                             <i class="fa fa-pause" aria-hidden="true"></i>
-                        </a>
+                            
+                        </div>
+                        <div>
+                            <i class="fa fa-play" aria-hidden="true"></i>
+                        </div>
             </div>
             <ul class="btn">
                     <li><a href="#"></a></li>
@@ -276,7 +318,7 @@ $('.listBox1').children('ul').css({'right':'416px'})
                             <form action="#">
                                 <div class="name">
                                     <label for="name">신청자 :</label>
-                                    <input type="text" id="name" placeholder="이름을 기입해주세요" autofocus>
+                                    <input id="name" placeholder="이름을 기입해주세요" onkeyup='printName()' autofocus>
                                 </div>
                     
 
@@ -301,7 +343,7 @@ $('.listBox1').children('ul').css({'right':'416px'})
                         <option value="14">14명</option>
                 </select>
 
-            <button type="button">예약하기</button>
+            <button id="button1">예약하기</button>
 
             </div>
                             </form>
@@ -309,9 +351,13 @@ $('.listBox1').children('ul').css({'right':'416px'})
 
 
 
+                        <div id="datepicker">
+
+                        </div>
 
 
-                        <form class="eto">
+
+                        <!-- <form class="eto">
                             <div class="date">
                                 <label for="date">날짜 :</label>
                                 <input type="text" id="date" placeholder="날짜를 선택해주세요" >
@@ -397,18 +443,23 @@ $('.listBox1').children('ul').css({'right':'416px'})
                     
                     </div>
                             </div>
-                        </form>
+                        </form> -->
 
-        
-                        <ul class="tep1">
-                            <li>대상 : 개인 및 14인 이하 소규모 단체(초등 4학년 이상)</li>
-                            <li>시간 : 월요일 – 금요일, 오전 8시 30분 – 오후 4시 30분</li>
-                            <li>
-                                NASA 본부 도서관에 대해 자세히 알아보기
-                                <i class="fa fa-check-circle" aria-hidden="true"></i>
-                            </li>
-                        </ul>
+<div class="tt00">
+                                    <ul class="tep1">
+                                <li>대상 : 개인 및 14인 이하 소규모 단체(초등 4학년 이상)</li>
+                                <li>시간 : 월요일 – 금요일, 오전 8시 30분 – 오후 4시 30분</li>
+                                <li>
+                                    NASA 본부 도서관에 대해 자세히 알아보기
+                                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                </li>
+                            </ul>
+</div>
+
                     </div>
+
+
+
                 </div>
                 </div>
     
@@ -425,7 +476,7 @@ $('.listBox1').children('ul').css({'right':'416px'})
         </div>
     
         <div class="listBox1">
-            <ul>
+            <ul class="listBox4">
                 <li>
                     <img src="img/box4-1.png" alt="" width="414" height="292">
                     <p>허블 우주 망원경이 촬영한 이 이미지를 
@@ -462,14 +513,15 @@ $('.listBox1').children('ul').css({'right':'416px'})
                 </li>
             </ul>
         </div>
-    
-            <span class="left" onclick="prev()" >
+    <!-- onclick="prev()"  -->
+            <span class="left" >
                 <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
             </span>
     
-            <span class="right" onclick="next()">
+            <span class="right" >
                 <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
-            </span>
+             </span>
+                <!--onclick="next()" -->
   
     </div>
 
@@ -662,5 +714,69 @@ $('.listBox1').children('ul').css({'right':'416px'})
             </ul>
         </footer>
     </div>
+
+
+    <div class="fixed">
+        <article>
+            <p>X</p>
+            <div class="logo22"></div>
+            <h2>예약하기</h2>
+            <ul class="menu3">
+                <li>신청자 : <span id='result'></span></li>
+                <li>인원 : <span></span></li>
+                <li>날짜 : <span></span></li>
+            </ul>
+
+            <button onclick="good()">확인</button>
+            
+
+    <div class="img21"></div>
+
+
+            <div class="brtxt">
+<ul >
+    
+    <li>
+        ! 단체의 경우 차량이 없으면 입장이 지연될 수 있음을 참고바랍니다.(전체 인원 집결 후 인원 확인 후 입장 가능)
+        
+    </li>
+    <li>
+        ! 견학 코스는 실제 연구 업무 시설로 관람 시 직원 안내에 적극 협조 바랍니다.(관람 시 질서유지 및 정숙한 관람)
+        
+    </li>
+    <li>
+        ! 음주 시 견학이 제한됩니다.
+        
+    </li>
+    <li>
+        ! 견학 사실을 증빙하는 별도의 확인서 등은 발급되지 않습니다.
+        
+    </li>
+    <li>
+        ! 방문인원에 외국인이 포함된 경우, 통역을 제공해드리지 않으므로 통역자와 동행하셔야 합니다.
+        
+    </li>     
+</ul>    
+   </div>
+    
+    
+        </article>
+    
+    </div>
+
+
+
+    <div class="fixed1">
+        <article>
+            <p>X</p>
+            <div class="imgda"></div>
+            
+    
+    
+        </article>
+    
+    </div>
+
+
 </body>
 </html>

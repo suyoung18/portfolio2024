@@ -12,6 +12,12 @@ img {border: none;
 
     .box1, .box2, .box3, .title ,.listBox1, .box6, .box7, .big, .big1, .icon {
         margin-bottom: 10px;
+        
+    }
+
+    body {
+        margin: auto;
+        width: 80%;
     }
 
     /* 박스1 */
@@ -29,17 +35,18 @@ img {border: none;
     justify-content: space-between;
     align-items: center;
     color: #fff;
-    
+    position: relative;
 }
 .box1-1 .util {
     font-size: 28px;
     padding-left: 40px;
+    position: relative;
 }
 .box1-1 .logo {
     padding: 10px;
     background-color: #0E1B61;
 }
-.box1-1 .search {
+.box1-1 .search input {
     margin-right: 20px;
     width: 200px;
     height: 50px;
@@ -50,16 +57,51 @@ img {border: none;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    position: relative;
+    border-radius: 5px;
+    color: #fff;
 }
 
 .box1-1 .search i {
-    right: 0px;
+    right: 22px;
+    top: 26px;
     width: 48px;
     height: 48px;
     position: absolute;
     border-left: 1px solid #fff;
     font-size: 48px;
+    z-index: 10;
+}
+
+.box1-1 .util .submenu {
+    width: 300px;
+    height: 510px;
+    background-color: #D9D9D9;
+    color: #000;
+    position: absolute;
+    left: 30px;
+    top: 70px;
+    z-index: 10;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #000;
+    display: none;
+}
+.box1-1 .util .no {
+    display: block;
+}
+
+.box1-1 .util .submenu ul {
+    margin: 5px 20px;
+    
+}
+
+.box1-1 .util .submenu li {
+    padding: 20px;
+    border-bottom: 1px solid #000;
+
+}
+.box1-1 .util .submenu li:nth-child(6) {
+    
+    border-style: none;
 }
 
 
@@ -103,13 +145,15 @@ img {border: none;
 
 
 
+
+
 /* 박스2 */
 
 .box2 {
     margin-top: 0px;
     width: 100%;
     height: 750px;
-    background-image: url(img/slide1.png);
+    background-image: url(img/slide1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center ;
@@ -125,12 +169,23 @@ img {border: none;
     width: 40%;
 
 }
+.box2 .slide>div {
+display: none;
+}
 .slide strong {
     font-size: 60px;
 }
 .slide p {
     font-size: 24px;
 }
+
+.box2 .slide .eo {
+    display: block;
+}
+
+
+
+
 .slide1 {
     color: #fff;
     width: 100%;
@@ -169,6 +224,14 @@ img {border: none;
     top: 34px;
     text-align: center;
 }
+.slide1 .btn1 div {
+    display: none;
+}
+
+.slide1 .btn1 .no {
+    display: block;
+}
+
 .slide1 i {
     
     padding-top: 5px;
@@ -203,7 +266,7 @@ img {border: none;
 
 .box3 {
     width: 50%;
-    height: 450px;
+    height: 600px;
     margin-top: 0px;
     background-color: #D9D9D9;
     opacity: 0.7;
@@ -254,7 +317,7 @@ img {border: none;
 
 .box3-2 .listBox {
     width: 100%;
-    height: 340px;
+    height: 500px;
     background-color: #C5C5C5;
     box-sizing: border-box;
 }
@@ -279,7 +342,7 @@ img {border: none;
 
 .box3-2 .listBox p {
     color: #000;
-    margin-top: 20px;
+    margin-top: 50px;
     padding-bottom: 15px;
 }
 
@@ -314,7 +377,7 @@ height: 100%;
 
 .txtBoxs {
     width: 50%;
-    height: 450px;
+    height: 600px;
     background-color: #9DA8E4;
 }
 
@@ -325,10 +388,11 @@ height: 100%;
 
 .txtBoxs .mop {
     width: 98%;
-    height: 380px;
+    height: 500px;
     background-color: #576FEB;
     border-radius: 10px;
-    margin: 10px;
+    margin:  20px auto ;
+    
 }
 
 .txtBoxs .mop1 {
@@ -336,6 +400,7 @@ height: 100%;
     justify-content: space-around;
     align-items: center;
     padding: 10px 0 10px 0px;
+    
 }
 
 .txtBoxs .mop1 li {
@@ -357,22 +422,24 @@ height: 100%;
 
 .txtBoxs .toTep {
         
-    width:98%;
-    height: 316px;
+    width:95%;
+    height: 416px;
     background-color: #3147BD;
     border-radius: 10px;
-    margin: 10px;
+    margin: auto;
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
 
 }
 
 .toto {
-    margin-left: 20px;
+    margin: 20px 40px;
 }
 
 
 .tep1 {
-    margin-top: 60px;
+    margin: 20px 40px;
     display: flex;
     width: 100%;
     flex-wrap: wrap;
@@ -415,12 +482,12 @@ height: 100%;
 }
 
 .txtBoxs form input {
-    background-color: transparent;
+    /* background-color: transparent;
             padding: 10px;
-            border: none;
+            border: none; */
 }
 
-.txtBoxs form input:focus {outline: none;}
+/* .txtBoxs form input:focus {outline: none;} */
 
 
 .txtBoxs form>div {
@@ -444,13 +511,20 @@ height: 100%;
 .txtBoxs .people {    
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    margin-right: 8px;
+    margin-right: 8%;
+    margin-top: 50px;
 
 }
 
 .txtBoxs form select {padding: 0 10px;}
 
-.toTep .eto {
+#datepicker {
+    margin: 20px 40px;
+}
+
+
+
+/* .toTep .eto {
     position: absolute;
     right: 50px;
     top: 0;
@@ -486,10 +560,186 @@ height: 100%;
 
 .cal001 td:hover {
     background-color: #FF3232;
+} */
+
+
+
+.fixed {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    z-index: 100;
+
+}
+.fixed.on {
+    display: flex;
+}
+
+.fixed article {
+    width: 80%;
+    height: 70vh;
+    background-color: #fff;
+    position: relative;
+    border-radius: 10px;
+    padding: 30px;
+    
+
 }
 
 
+.fixed article p {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #000;
 
+    font-size: 30px;
+    text-align: center;
+    line-height: 1.1;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.fixed article p:hover {
+    background-color: #fff;
+} 
+
+.fixed .logo22 {
+    background-image: url(img/toplogo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute; 
+    left: 50px;
+    top: 10px;
+    width: 200px;
+    height: 200px;
+    z-index: 120;
+}
+
+.fixed article h2 {
+    width: 57.7%;
+    margin: 0 auto;
+}
+
+.fixed article button {
+    padding: 10px 20px ;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0 325px;
+}
+
+.fixed article ul {
+    width: 60%;
+    margin: 0 auto;
+    list-style: none;
+    font-size: 18px ;
+}
+
+.fixed article .menu3 {
+    color: #000;
+}
+
+.fixed article li {
+    padding: 20px;
+}
+
+.fixed article .img21 {
+    width: 400px;
+    height: 300px;
+    background-image: url(img/img1.jpg);
+    background-position: center;
+    background-size: cover;
+    right: 330px;
+    top: 15px;
+    position: absolute; 
+}
+
+.fixed article .brtxt {
+    margin-top: 20px;
+    background-color: #45a049;
+    color: #fff;
+}
+
+body.fix {
+    overflow: hidden;
+}
+/* 이미지박스 */
+
+.fixed1 {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    z-index: 100;
+
+}
+.fixed1.on {
+    display: flex;
+}
+
+.fixed1 article {
+    width: 80%;
+    height: 70vh;
+    background-color: #fff;
+    position: relative;
+    border-radius: 10px;
+    padding: 30px;
+    
+
+}
+
+
+.fixed1 article p {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #000;
+
+    font-size: 30px;
+    text-align: center;
+    line-height: 1.1;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.fixed1 article p:hover {
+    background-color: #fff;
+} 
+
+.fixed1 .imgda {
+    background-image: url(img/g1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 800px;
+    height: 670px;
+    z-index: 120;
+}
+
+
+body.fix {
+    overflow: hidden;
+}
 
 
 
@@ -631,6 +881,7 @@ z-index: 10;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 /* 박스7 */
@@ -639,6 +890,7 @@ z-index: 10;
     width: 100%;
     height: 826px;
     background-color: #1F2540;
+    position: relative;
 }
 
 .box7 .title {
@@ -681,24 +933,34 @@ z-index: 10;
 
 }
 
-.box7 .img {
+.box7 .wee .img {
     width: 100%;
-    height: 50%;
+    height: 100%;
     position: absolute;
-    display: flex;
-    justify-content: space-around;
     
-    
+     
 
 }
 
-.box7 .img:nth-child(1) {}
+/* .box7 .wee .img:nth-child(1) {
+    left: 0;
+    top: 0;
+}
 
-.box7 .img:nth-child(2) {}
+.box7 .wee .img:nth-child(2) {
+    left: 0;
+    top: 0;
+}
 
-.box7 .img:nth-child(3) {}
+.box7 .wee .img:nth-child(3) {
+    left: 0;
+    top: 0;
+}
 
-.box7 .img:nth-child(4) {}
+.box7 .wee .img:nth-child(4) {
+    left: 0;
+    top: 0;
+} */
 
 /* 
 .box7 .img:nth-child(4) {
@@ -717,8 +979,8 @@ z-index: 10;
     height: 715px;
     border: 1px solid #fff;
     position: absolute;
-    left: 200px;
-    top: 10px;
+    left: 100px;
+    top: 5px;
 
 }
 
@@ -727,7 +989,7 @@ z-index: 10;
 }
 
 .wee .img li:nth-child(2) {
-    background-image: url(img/g2.png);
+    background-image: url(img/g2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -735,8 +997,8 @@ z-index: 10;
     height: 350px;
     border: 1px solid #fff;
     position: absolute;
-    left: 700px; 
-    top: 10px;
+    right: 520px; 
+    top: 5px;
 }
 
 .wee .img li:nth-child(3) {
@@ -748,8 +1010,8 @@ z-index: 10;
     height: 350px;
     border: 1px solid #fff;
     position: absolute;
-    right: 279px;
-    top: 10px;
+    right: 100px;
+    top: 5px;
 }
 
 .wee .img li:nth-child(4) {
@@ -757,12 +1019,12 @@ z-index: 10;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    width: 750px;
+    width: 780px;
     height: 350px;
     border: 1px solid #fff;
     position: absolute;
-    top: 375px;
-    right: 278px;
+    top: 370px;
+    right: 100px;
 }
 
 
@@ -999,7 +1261,7 @@ z-index: 10;
 }
 
 .box9 .menu1 li {
-    
+    cursor: pointer;
 }
 
 .box9 .menu1 li:nth-child(2) {
@@ -1057,6 +1319,7 @@ z-index: 10;
 .box9 .sns p {
     font-size: 40px;
     padding-right: 15px;
+    
 }
 
 .box9 .sns p:nth-child(1) i {
