@@ -1,5 +1,7 @@
 /* 언어설정 */
 @charset 'UTF-8';
+@import url(//fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
+
 
 /* reset */
 * {margin: 0;
@@ -9,3 +11,973 @@ a {text-decoration: none;
     color: #000;}
 img {border: none;
     vertical-align: bottom;}
+
+body {
+    position: relative;     
+    overflow: hidden; 
+    font-family: 'Jeju Myeongjo', serif;
+}
+
+/* main */
+
+.main {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 1;
+     scroll-snap-type: y mandatory; 
+
+
+}
+
+.main article {
+    width: 100%;
+    height: 100vh;
+    /* font-family: 'Danjo-bold-Regular'; */
+      /* scroll-margin-top: 120px ;  */
+    display: flex;
+    font-size: 60px;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    scroll-snap-align: start; 
+    
+}
+
+.main article:nth-child(1) {
+    background-color: #075FE3;
+}
+
+.main .main2 {
+    /* display: none;     */
+    opacity: 0;
+    flex-wrap: wrap;
+    transform: translate(-0%, -0%);
+    transition: opacity 0.8s ease-in-out, left 0.8s ease-in-out, top 0.8s ease-in-out;
+
+}
+
+.main .main2 .mainImg {
+
+}
+
+.main .main2 img {
+
+}
+
+
+
+/* profile */
+
+.profile {
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    z-index: 1;
+    scroll-snap-type: y mandatory;     
+    -ms-overflow-style: none; /* 인터넷 익스플로러 */
+    scrollbar-width: none; /* 파이어폭스 */    
+    position: absolute;
+    left: -100%;
+    top: -100%;
+    /* overflow: hidden; */
+    transition: opacity 0.8s ease-in-out, left 0.8s ease-in-out, top 0.8s ease-in-out;
+
+     /* transform: translate(-100%, -100%); */
+
+}
+
+/* ( 크롬, 사파리, 오페라, 엣지 ) 동작 */
+.profile::-webkit-scrollbar {
+    display: none;
+  }
+
+.profile article {
+    width: 100%;
+    height: 100vh;
+    /* font-family: 'Danjo-bold-Regular'; */
+      /* scroll-margin-top: 120px ;  */
+    display: flex;
+    font-size: 60px;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+     scroll-snap-align: start; 
+     font-family: 'Jeju Myeongjo', serif;
+     color: #808080;
+}
+
+.profile .profileOne {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.profile .profileOne .homebtn {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+
+.profile .profileOne h2 {
+    font-size: 64px;
+    text-align: center;
+    margin-left: 30%;
+    margin-bottom: 100px;
+}
+
+.profile .profileOne p {
+    font-size: 32px;
+    width: 40%;
+    margin-left: 30%;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.profile .profileOne img {
+    
+}
+
+.profile .profileOne img:nth-child(1) {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+}
+.profile .profileOne img:nth-child(4) {
+    margin-left: 30%;
+    margin-bottom: 100px;
+}
+
+.profile .profileTwo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile .profileTwo h2 {
+    font-size: 64px;
+    text-align: center;
+    margin-right: 30%;
+    margin-bottom: 100px;
+}
+
+.profile .profileTwo p {
+    font-size: 32px;
+    width: 40%;
+    margin-right: 30%;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.profile .profileTwo img {
+    /* height: 100vh; */
+}
+
+.profile .profileTwo img:nth-child(4) {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100vh;
+}
+.profile .profileTwo img:nth-child(3) {
+    margin-right: 30%;
+    margin-bottom: 100px;
+}
+
+.profile .profileMain {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.profile .profileMain>img {
+    margin-bottom: 40px;
+    margin-left: -13%;
+}
+
+.profile .profileMain .profile1 {
+    /* font-size: 60px; */
+}
+
+
+.profile .profileMain .profile1 img {
+    margin-bottom: 20px;
+    margin-left: -13.5%;
+
+}
+
+.profile .profileMain .profile1 h2 {
+    font-size: 50px;
+    margin-left: -10%;
+    color: #000;
+
+}   
+
+
+.profile .profileMain .profile1 span {
+    font-size: 40px;
+    color: #808080;
+}
+
+.profile .profileMain .profile1 strong {
+    font-size: 40px;
+    margin-top: 20px;
+    margin-left: -10%;
+
+}
+
+.profile .profileMain .profile2 {
+    margin: 50px;
+    color: #808080;
+}
+
+.profile .profileMain .profile2 h2 {
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+.profile .profileMain .profile2 ul {
+    margin-bottom: 20px;
+}
+
+.profile .profileMain .profile2 li {
+    font-size: 32px;
+    padding-top: 20px;
+    padding-left: 20px;
+
+}
+
+.profile .profileMain .profile2 p {
+    font-size: 32px;
+    margin-top: 20px;
+}
+
+.profile .profileMain .profile3 {
+    margin-bottom: -50px;
+}
+
+.profile .profileMain .profile3 ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.profile .profileMain .profile3 li {
+    padding-right: 40px;
+}
+
+.profile .profileMain .homebtn {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/* design */
+
+.design {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    /* z-index: 1; */
+     scroll-snap-type: y mandatory; 
+    -ms-overflow-style: none; /* 인터넷 익스플로러 */
+    scrollbar-width: none; /* 파이어폭스 */    
+    position: absolute;
+    right: -100%;
+    top: -100%;
+    /* overflow: hidden; */
+    transition: opacity 0.8s ease-in-out, left 0.8s ease-in-out, top 0.8s ease-in-out;
+    
+     /* transform: translate(-100%, -100%); */
+     /* display: none; */
+    opacity: 0;
+}
+
+.design::-webkit-scrollbar {
+    display: none; 
+}
+
+.design article {
+        width: 100%;
+    height: 100vh;
+    /* font-family: 'Danjo-bold-Regular'; */
+      /* scroll-margin-top: 120px ;  */
+    display: flex;
+    font-size: 60px;
+    justify-content: center;
+    align-items: center;
+    
+    scroll-snap-align: start; 
+    font-family: 'Jeju Myeongjo', serif;
+    color: #808080;
+    background-color: #A6EFFF;
+}
+
+
+.design .designMain {
+    background-color: #A6EFFF;
+}
+
+.design .designMain2 {
+    background-color: #A6EFFF;
+    position: relative;
+    /* opacity: 0; */
+}
+
+.design .designMain2>img {
+    position: absolute;
+}
+
+
+.designMain2 .homebtn1 img {
+    position: absolute;
+
+}
+
+
+.designMain2 .homebtn1 img:nth-child(1){
+    left: 24%;
+    top: 26%;
+}
+
+
+.designMain2 .homebtn1 img:nth-child(2){
+    left:39.5%;
+    top: 37%;
+}
+
+/* .design .designMain2 .homebtn1 {
+    left: 50%;
+    top: 50%;
+} */
+
+.design .designMain2 .design1Btn {
+    left: 0;
+    top: 0;
+}
+
+.design .designMain2 .design2Btn {
+    left: 0;
+    bottom: 0;
+}
+
+.design .designMain2 .design3Btn {
+    right: 0;
+    top: 0;
+}
+
+.design .designMain2 .design4Btn {
+    right: 0;
+    bottom: 0;
+}
+
+
+/* .design>div {
+    width: 100%;
+    height: 100vh;
+    background-color: aqua;
+    display: none;
+    overflow: hidden;
+} */
+
+section.on {
+    opacity: 1;
+}
+
+.design1 {
+    position: absolute;
+    left: -100%;
+    top: -100%;
+    background-color: #fff;
+    opacity: 0;
+    overflow: hidden;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+}
+
+
+.design1 .design1Bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.design1 .designIn {
+    width: 60%;
+    height: auto;
+    z-index: 10;
+    margin: auto;
+}
+
+.designTitle {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.design1 .designIn .designTxt {
+    width:100%;
+    height: auto;
+    margin: auto;
+}
+
+.design1 .designIn .designTxt h2 {
+    font-size: 32px;
+}
+
+.design1 .designIn .designTxt p {
+    width: 50%;
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+.design1 .designIn .designTxt .designImg {
+    width: 80%;
+    margin: auto;
+}
+
+.design1 .designIn .designButton {
+    width: 40%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+
+
+.design2 {
+    position: absolute;
+    left: -100%;
+    bottom: -100%;
+    opacity: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+
+.design2 .design1Bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.design2 .designIn {
+    width: 60%;
+    height: auto;
+    z-index: 10;
+    margin: auto;
+}
+
+.design2 .designTitle {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.design2 .designIn .designTxt {
+    width:100%;
+    height: auto;
+    margin: auto;
+}
+
+.design2 .designIn .designTxt h2 {
+    font-size: 32px;
+}
+
+.design2 .designIn .designTxt p {
+    width: 50%;
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+.design2 .designIn .designTxt .designImg {
+    width: 80%;
+    margin: auto;
+}
+
+.design2 .designIn .designButton {
+    width: 40%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+
+.design3 {
+    position: absolute;
+    right: -100%;
+    top: -100%;
+    opacity: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.design3 .design1Bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.design3 .designIn {
+    width: 60%;
+    height: auto;
+    z-index: 10;
+    margin: auto;
+}
+
+.design3 .designTitle {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.design3 .designIn .designTxt {
+    width:100%;
+    height: auto;
+    margin: auto;
+}
+
+.design3 .designIn .designTxt h2 {
+    font-size: 32px;
+}
+
+.design3 .designIn .designTxt p {
+    width: 50%;
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+.design3 .designIn .designTxt .designImg {
+    width: 80%;
+    margin: auto;
+}
+
+.design3 .designIn .designButton {
+    width: 40%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+
+
+.design4 {
+    position: absolute;
+    right: -100%;
+    bottom: -100%;
+    opacity: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.design4 .design1Bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.design4 .slides {
+    position: relative;
+    overflow: hidden;
+    width: 800px;
+}
+
+.design4 .slider {
+    
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.design4 .slide1 {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 20px;
+    width: 1200px;
+}
+
+.design4 .slide1 img {
+    width: 800px;
+    height: auto;
+    margin-top: 200px;
+}
+
+.design4 .slide1 p {
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+
+
+/* .design4 .slide1 {
+    width: 1000px;
+    height: 600px;
+    display: flex;
+} */
+/* 
+.design4 .slide2 {
+    width: 1000px;
+    height: 600px;
+    display: flex;
+}
+
+.design4 .slide3 {
+    width: 1000px;
+    height: 600px;
+    display: flex;
+} */
+
+.design4 .lrBtn {
+ position: absolute;
+ display: flex;
+ justify-content: space-between;
+ top: 50%;
+ left: 24.5%;
+ width: 1000px;
+}
+
+.design4 .lrBtn>p {
+
+    font-size: 40px;
+    color: #808080;
+}
+
+.design4 .lrBtn .left {
+    left: 0;
+}
+
+.design4 .lrBtn .right {
+    right: 0;
+}
+
+
+.design4 .design_homebtn4 {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+
+
+
+
+
+/* popup */
+
+.popUp {
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 10;
+}
+
+.popup1 {
+   
+    width: 100%;
+    height: 80vh;
+    overflow-y: scroll;
+    position: fixed;
+    left: 0;
+    top: 100px; 
+    opacity: 0;
+
+
+}
+
+.popup1 .popbtn {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #fff;
+    font-size: 120px;
+}
+
+.popup1 .popdiv {
+    width: 80%;
+    height: 80vh;
+    background: #fff;
+    margin: auto;
+    border-radius: 50px;
+    overflow: auto;
+
+}
+.popdiv::-webkit-scrollbar {
+    display: none;
+  }
+
+.popup1 .popdiv img {
+    width: 100%;
+
+}
+
+
+.popup2 {
+   
+    width: 100%;
+    height: 80vh;
+    overflow-y: scroll;
+    position: fixed;
+    left: 0;
+    top: 100px; 
+    opacity: 0;
+
+
+}
+
+.popup2 .popbtn {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #fff;
+    font-size: 120px;
+}
+
+.popup2 .popdiv {
+    width: 80%;
+    height: 80vh;
+    background: #fff;
+    margin: auto;
+    border-radius: 50px;
+    overflow: auto;
+
+}
+/* .popdiv::-webkit-scrollbar {
+    display: none;
+  } */
+
+.popup2 .popdiv img {
+    width: 100%;
+
+}
+
+
+.popup3 {
+   
+    width: 100%;
+    height: 80vh;
+    overflow-y: scroll;
+    position: fixed;
+    left: 0;
+    top: 100px; 
+    opacity: 0;
+
+
+}
+
+.popup3 .popbtn {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #fff;
+    font-size: 120px;
+}
+
+.popup3 .popdiv {
+    width: 80%;
+    height: 80vh;
+    background: #fff;
+    margin: auto;
+    border-radius: 50px;
+    overflow: auto;
+
+}
+/* .popdiv::-webkit-scrollbar {
+    display: none;
+  } */
+
+.popup3 .popdiv img {
+    width: 100%;
+
+}
+
+
+
+
+/* button */
+
+button {
+    font-size: 17px;
+    padding: 0.5em 2em;
+    border: transparent;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    background: dodgerblue;
+    color: white;
+    border-radius: 4px;
+   }
+   
+   button:hover {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(30,144,255,1) 0%, rgba(0,212,255,1) 100%);
+   }
+   
+   button:active {
+    transform: translate(0em, 0.2em);
+   }
+
+
+/* 1번구간 1280픽셀 이상 15999픽셀 이하 구간##################################################### */
+
+@media(min-width:1280px) and (max-width:1599px){
+
+    .main img {
+        width: 40%;
+    }
+
+    .main2>img:nth-child(1) {
+        width: 180px;
+    }
+
+    .main2>img:nth-child(2) {
+        width: 180px;
+
+    }
+
+    .main2>img:nth-child(4) {
+        width: 180px;
+
+    }
+
+    .main2>img:nth-child(5) {
+        width: 180px;
+    }
+
+    .profile {
+
+    }
+
+    .profileOne img {
+        width: 35%;
+    }
+
+    .profile .profileOne h2 {
+        font-size: 50px;
+    }
+
+    .profile .profileOne p{
+        font-size: 24px;
+    }
+
+
+    .profileTwo img {
+        width: 35%;
+    }
+
+    .profile .profileTwo h2 {
+        font-size: 50px;
+    }
+
+    .profile .profileTwo p{
+        font-size: 24px;
+    }
+
+    .profile .homebtn {
+        width: 150px;
+    }
+
+
+    .profile .profileMain>img {
+        width: 35%;
+    }
+
+    .profile .profileMain>img:nth-child(1) {
+        margin-left: -300px;
+        width: 400px;
+        margin-bottom: 20px;
+    }
+
+    .profile .profileMain .profile1 {
+        margin-left: 80px;
+    }
+
+    .profile .profileMain .profile1 img {
+        width: 600px;
+        margin-bottom: 50px;
+    }
+
+
+    .profile .profileMain .profile1 h2 {
+        font-size: 45px;
+        width: 300px;
+    }
+
+    .profile .profileMain .profile1 span {
+        font-size: 35px;
+    }
+
+    .profile .profileMain .profile1 strong {
+        font-size: 35px;
+    }
+
+    .profile .profileMain .profile2  {
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .profile .profileMain .profile2 h2 {
+        font-size: 50px;
+    }
+
+    .profile .profileMain .profile2 li {
+        font-size: 28px;    
+    }
+    
+    .profile .profileMain .profile2 p {
+        font-size: 28px;    
+    }
+
+    .profile .profileMain .homebtn {
+        width: 150px;    
+    }
+
+
+    .profile .profileMain .profile3  {
+        width: 100%;
+        margin-left: -160px ;
+    }
+
+    .profile .profileMain .profile3 li {
+        padding: 0 10px; 
+        width: 10%;
+    }
+
+    .profile .profileMain .profile3 img {
+        width: 100%;
+        
+    }
+
+
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>네이버 로그인</title>
+
+
+
+    <!-- 폰트어썸 CDN -->
+    <script src="https://kit.fontawesome.com/85ac904405.js" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<!-- <link rel="stylesheet" type="text/css" href="style2.css" /> -->
+
+<!-- <link rel="stylesheet" href="style2.css"> -->
+ 
+<style>
+    * {margin: 0;
+    padding: 0;}
+ul,ol {list-style: none;}
+a {text-decoration: none;
+    color: #000;}
+img {border: none;
+    vertical-align: bottom;}
+
+    section {
+        width: 700px;
+        height: 550px;
+        margin: 140px auto;
+        border-radius: 10px;
+        border: 1px solid #adadad;
+        box-shadow: #424242 5px 5px 10px;
+        position: relative;
+    }
+
+    section>a {
+        position: absolute;
+        right: 40px;
+        top: 30px;
+        font-size: 24px;
+        color: #6A5F5F;
+    }
+
+    section h2 {
+        text-align: center;
+        padding-top: 30px;
+        font-size: 40px;
+        color: #6A5F5F;
+    }
+
+    section .top {
+        margin-top: 30px;
+        width: 100%;
+        height: 80px;
+        
+    }
+
+    section .top ul {
+    display: flex;
+    }
+
+    section .top li {
+        width: 33.3333%;
+        height: 80px;
+        line-height: 3.5;
+        text-align: center;
+        border: 1px solid #adadad;
+        border-radius: 10px 10px 0px 0 ;
+        border-bottom: none;
+        font-size: 24px;
+    }
+
+    section .top li:hover {
+        background-color: #d9d9d9;
+    }
+
+    section .login {
+        
+    }
+    section .login .login2 input {
+        width: 80%;
+        height: 40px;
+        margin: 20px auto ;
+        display: flex;
+        border-radius: 5px;
+        border : 1px solid #adadad ;
+    }
+
+    section .login input {
+
+}
+
+section .login ul {
+        display: flex;
+        width: 80%;
+        margin: auto;        
+        justify-content: space-between;
+
+    }
+
+
+
+    section .login li {
+        font-size: 16px;
+        color: #727272;
+        display: flex;
+        
+    }
+
+    section .login li input {
+        margin-right: 5px;
+    }
+
+
+    section .login button {
+        margin: 20px 175px;
+        width: 50%;
+        height: 50px;
+        font-size: 24px;
+        background-color: rgb(52, 216, 65);
+        border-color: #adadad;
+        color: #fff;
+        border-radius: 5px;
+    }
+
+    #naverIdLogin {
+        margin-left: 215px;
+    }
+
+
+.bottom {
+    width: 30%;
+    margin: -120px auto;
+}
+
+.bottom ul {
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.bottom li {
+    width: 80%;
+    text-align: center;
+    border-right: 1px solid #adadad ;
+}
+
+.bottom li a {
+    color: #8a8a8a;
+}
+
+.bottom li:nth-child(3) {
+    border-style: none;
+}
+
+#naver_id_login {display: none;}
+
+</style>
+
+
+</head>
+<body>
+    <!-- 네이버 로그인 버튼 -->
+<!-- <div id="naverIdLogin"></div> -->
+<div id="naver_id_login"></div>
+
+<section>
+    
+    <h2>TOKKI SOJU</h2>
+
+    <a href="sub_1.html"><i class="fa fa-reply" aria-hidden="true"></i></a>
+
+    <div class="top">
+        <ul>
+            <li>ID 로그인</li>
+    
+            <li>일회용 번호</li>
+            <li>QR코드</li>
+        </ul>
+    </div>
+
+    <div class="login">
+        <div class="login2">
+            <input type="text" name="" id="">
+            <input type="password" name="" id="">
+        </div>
+
+        <ul>
+            <li>
+                <input type="checkbox" name="" id="">
+                <p>로그인상태유지</p>
+            </li>
+            <!-- <input type="checkbox" name="" id=""> -->
+    
+            <li>
+                <input type="radio" name="" id="">
+                <p>IP보안</p>
+            </li>
+        </ul>
+
+
+        <button>login</button>
+        <div id="naverIdLogin"></div>
+
+        
+    </div>
+
+
+    
+    
+    
+</section>
+
+<div class="bottom">
+    <ul>
+        <li><a href="#">비밀번호 찾기</a></li>
+        <li><a href="#">아이디 찾기</a></li>
+        <li><a href="#">회원가입</a></li>
+    </ul>
+</div>
+
+
+<script type="text/javascript" src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.0.js" charset="utf-8"></script>
+<script type="text/javascript">
+    var naverLogin = new naver.LoginWithNaverId({
+        clientId: "IAUPVqTxx7X_Tp3A_sgZ", // 여기에 클라이언트 ID 입력
+        callbackUrl: "YOUR_CALLBACK_URL", // 콜백 URL 입력
+        isPopup: false, // 팝업을 통한 연동처리 여부
+        loginButton: {color: "green", type: 3, height: 60} // 로그인 버튼의 타입을 지정
+    });
+
+    naverLogin.init();
+
+
+
+        var naver_id_login = new naver_id_login("XN7o8u2SfR4iAdSpZGPj", "YOUR_CALLBACK_URL");
+    var state = naver_id_login.getUniqState();
+    naver_id_login.setButton("white", 2,40);
+    naver_id_login.setDomain("YOUR_SERVICE_URL");
+    naver_id_login.setState(state);
+    naver_id_login.setPopup();
+    naver_id_login.init_naver_id_login();
+</script>
+</body>
+</html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인물중심소개웹사이트</title>
+
+<!-- 폰트어썸 -->
+    <script src="https://kit.fontawesome.com/5259710eda.js" crossorigin="anonymous"></script>
+
+    <!-- 외부스타일시트연결 -->
+    <link rel="stylesheet" href="style.css">
+<!-- 외부스크립트연결 -->
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+<!--  -->
+<script src="js/js.js"></script>
+<!-- 
+<script>
+
+var bb=0;
+$(function(){
+
+$('.divbox1 p').click(function(){
+
+    bb++
+    $('.slide1').css({'left':-350*bb})
+    $('.slide1 li').removeClass('on');
+    console.log(bb)
+    $('.slide1 li').eq(bb+2).addClass('on')
+    $('.slide1 li').eq(bb-2).clone().appendTo('.slide1')
+})
+
+setInterval(function(){
+    $('.divbox1 p').trigger('click')
+    $('.divbox1 img').stop('hover')
+ },3000)
+        }) -->
+</script>
+
+</head>
+<body>
+    <header>
+        <!-- 본인을나타낼수 있는로고 -->
+        <h1><img src="img/logo.png" alt="" width="290" height="100"></h1>
+        <nav>
+            <ul>
+                <li class="nav"><a href="#">메뉴</a></li>
+                <li><a href="#">영화소개</a></li>
+                <li><a href="#">갤러리</a></li>
+                <li><a href="#">영화 ost</a></li>
+            </ul>
+        </nav>
+
+        <div class="menu">
+            <div class="cona">
+                <p>X</p>
+                <h2>메뉴</h2>
+                <ul class="menu2">
+                    
+                    <li><a href="#">동영상</a></li>
+                    <li><a href="#">갤러리</a></li>
+                    <!-- <li><a href="#">중년기</a></li> -->
+                    <!-- <li><a href="#">크레딧</a></li> -->
+                </ul>
+                <ul class="menu1">
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">포스터</a></li>
+                    <li><a href="index.html">main</a></li>
+                    <!-- <li><a href="#">갤러리</a></li> -->
+                </ul>
+            </div>
+        </div>
+    </header>
+
+
+    <section>
+
+<article class="Div1">
+            <div class="bigimg">
+                <div class="box31">
+                    <img src="img/img70.png" alt="" width="353" height="1100px" style="overflow: hidden;">
+                </div>
+                <ul class="gall">
+                    <li>
+                        <img src="img/img10.jpg" alt="" width="600" height="370">
+                    </li>
+                    <li>
+                        <img src="img/img8.jpg" alt="" width="500" height="370">
+                    </li>
+                    <li>
+                        <img src="img/img35.jpg" alt="" width="500" height="370">
+                    </li>
+                    <li>
+                        <img src="img/img25.jpg" alt="" width="600" height="370">
+                    </li>
+                </ul>
+            </div>
+
+            <div class="txtA">
+                <ul>
+                    <li><a href="index.html">main</a></li>
+                    <li><a href="#">포스터</a></li>
+                    <li><a href="#">동영상</a></li>
+                    <li><a href="#">Photos</a></li>
+                </ul>
+            </div>
+</article>
+
+<article class="Div2">
+    <div class="divbox1">
+        <h1>포스터</h1>
+        <p>다음</p>
+        
+        <ul class="slide1">
+            <li class="on">
+                <img src="img/img12.jpg" alt="" width="350" height="550"  >
+            </li>
+            <li>
+                <img src="img/img14.jpg" alt="" width="350" height="550">
+            </li>
+            <li>
+                <img src="img/img18.jpg" alt="" width="350" height="550">
+            </li>
+            <li>
+                <img src="img/img22.jpg" alt="" width="350" height="550">
+            </li>
+            <li>
+                <img src="img/img23.jpg" alt="" width="350" height="550">
+            </li>
+            <li>
+                <img src="img/img24.jpg" alt="" width="350" height="550">
+            </li>
+            <li>
+                <img src="img/img29.jpg" alt="" width="350" height="550">
+            </li>
+            <li>
+                <img src="img/img33.jpg" alt="" width="350" height="550">
+            </li>
+            <li>
+                <img src="img/poster1.jpg" alt="" width="350" height="550">
+            </li>
+            <li>
+                <img src="img/poster2.jpg" alt="" width="350" height="550">
+            </li>
+            <li>
+                <img src="img/poster3.jpg" alt="" width="350" height="550">
+            </li>
+            <li>
+                <img src="img/poster4.jpg" alt="" width="350" height="550">
+            </li>
+            <li>
+                <img src="img/img41.jpg" alt="" width="350" height="550">
+            </li>
+            <li>
+                <img src="img/poster8.jpg" alt="" width="350" height="550">
+            </li>
+            <li>
+                <img src="img/poster9.jpg" alt="" width="350" height="550">
+            </li>
+
+        </ul>
+    </div>
+
+
+    <div class="divimg">
+        <p>X</p>
+        <img src="img/img12.jpg" alt="">
+    </div>
+
+</article>
+
+
+
+
+<article class="Div3">
+
+<h2>동영상</h2>
+
+    <div class="divvid">
+
+            
+
+        <div class="mainvid">
+            <video class="Video2"  controls >
+                <source src="img/vid2.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <ul class="vidli">
+            <li>
+                <video class="Video3"   >
+                    <source src="img/vid2.mp4" type="video/mp4">
+                </video>
+            </li>
+            <li>
+                <video class="Video3"   >
+                    <source src="img/vid3.mp4" type="video/mp4">
+                </video>
+            </li>
+            <li>
+                <video class="Video3"   >
+                    <source src="img/vid4.mp4" type="video/mp4">
+                </video>
+            </li>
+            <li>
+                <video class="Video3"   >
+                    <source src="img/vid5.mp4" type="video/mp4">
+                </video>
+            </li>
+        </ul>
+
+        <div class="vidtxt">
+            <ul class="txtli">
+                <li class="on">
+                    <h3>시네마 천국 메인 예고편 l 왓챠 수입/배급작</h3>
+                    <p>어린 시절 영화가 세상의 전부였던 소년 토토(살바토레 카스치오)는 학교 수업을 마치면 마을 광장에 있는 낡은 시네마 천국이라는 극장으로 달려가 영사 기사 알프레도와 친구로 지내며 어깨너머로 영사기술을 배운다. 어느 날 관객들을 위해 광장에서 야외 상영을 해주던 알프레도가 그만 화재 사고로 실명하게 되고, 토토가 그의 뒤를 이어 시네마 천국의 영상기사로 일하게 된다. 실명한 후에도 토토의 친구이자 아버지로 든든한 정신적 지주가 되어준 알프레도는 청년이 된 토토(마코 레오나디)가 사랑하는 여자 엘레나(아그네즈 나노)의 부모님의 반대로 좌절하자 넓은 세상으로 나가서 더 많은 것을 배우라며 권유하는데...</p>
+                </li>
+                <li>
+                    <h3>Cinema Paradiso Official Trailer</h3>
+                    <p>영화에 대한 주세페 토르나토레의 사랑에 찬 경의는 성공한 영화감독 살바토레가 어린 시절 내내 지역 영화관에서 영사기사로 일했던 그의 오랜 친구인 알프레도의 장례식을 위해 집으로 돌아가는 이야기를 담고 있습니다. 살바토레는 30년 전에 떠났던 공동체와 다시 연결되면서 아름다운 엘레나와의 첫 사랑에 대한 기억과 그의 삶을 형성했던 모든 우여곡절이 다시 넘쳐납니다</p>
+                </li>
+                <li>
+                    <h3>[시네마 천국 더빙] 토토·엘레나 재회 장면 클립</h3>
+                    <p>951029 KBS1 시네마 천국 (Cinema Paradiso, 1988) 성우진
+                        * MBC 첫 방영 후, KBS, SBS 재더빙
+                        장광 - 살바토레 '토토' 디 비타 役 (자끄 페렝)
+                        권희덕 - 엘레나 멘돌라 役 (브리지트 포시)
+                        이치우 - 알프레도 役 (필립 느와레)</p>
+                </li>
+                <li>
+                    <h3>시네마 천국 [명장면]HD.</h3>
+                    <p>유명 영화감독으로 활약 중인 토토는 고향 마을의 영사기사 알프레도의 사망소식에 30년 만에 고향을 찾는다. 어린 시절 영화가 세상의 전부였던 소년 토토는 학교 수업을 마치면 마을 광장에 있는 낡은 ‘시네마천국’이라는 극장으로 달려가 영사 기사 알프레도와 친구로 지내며 어깨너머로 영사기술을 배운다.</p>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+
+
+
+</article>
+
+
+
+
+<article class="Div4">
+
+    <div class="listimg">
+        
+
+
+        <h1>갤러리</h1>
+
+
+
+        <ul class="slide2">
+            <li class="on">
+                <a href=""><img src="img/img1.jpg" alt="" ></a>
+            </li>
+            <li>
+                <a href=""><img src="img/img2.jpg" alt="" ></a>
+            </li>
+            <li>
+                <a href=""><img src="img/img3.jpg" alt="" ></a>
+            </li>
+            <li>
+                <a href=""><img src="img/img4.jpg" alt="" ></a>
+            </li>
+            <li>
+                <a href=""><img src="img/img5.jpg" alt="" ></a>
+            </li>
+            <li>
+                <a href=""><img src="img/img6.jpg" alt="" ></a>
+            </li>
+            <li>
+                <a href=""><img src="img/img7.jpg" alt="" ></a>
+            </li>
+            <li>
+                <a href=""><img src="img/img8.jpg" alt="" ></a>
+            </li>
+            <li>
+                <a href=""><img src="img/img9.jpg" alt="" ></a>
+            </li>
+            <li>
+                <a href=""><img src="img/img10.jpg" alt="" ></a>
+            </li>
+            <li>
+                <a href=""><img src="img/img11.jpg" alt="" ></a>
+            </li>
+            <li>
+                <a href=""><img src="img/img12.jpg" alt="" ></a>
+            </li>
+            <li>
+                <a href=""><img src="img/img13.jpg" alt="" ></a>
+            </li>
+            <li>
+                <a href=""><img src="img/img14.jpg" alt="" ></a>
+            </li>
+            <li>
+                <a href=""><img src="img/img15.jpg" alt="" ></a>
+            </li>
+            <li>
+                <a href=""><img src="img/img16.jpg" alt="" ></a>
+            </li>
+            <li>
+                <a href=""><img src="img/img17.jpg" alt="" ></a>
+            </li>
+            <li>
+                <a href=""><img src="img/img18.jpg" alt="" ></a>
+            </li>
+            <li>
+                <a href=""><img src="img/img19.jpg" alt="" ></a>
+            </li>
+            <li>
+                <a href=""><img src="img/img20.jpg" alt="" ></a>
+            </li>
+            <li>
+                <a href=""><img src="img/img21.jpg" alt="" ></a>
+            </li>
+            <li>
+                <a href=""><img src="img/img22.jpg" alt="" ></a>
+            </li>
+            <li>
+                <a href=""><img src="img/img23.jpg" alt="" ></a>
+            </li>
+            <li>
+                <a href=""><img src="img/img24.jpg" alt="" ></a>
+            </li>
+            <li>
+                <a href=""><img src="img/img25.jpg" alt="" ></a>
+            </li>
+            <li>
+                <a href=""><img src="img/img26.jpg" alt="" ></a>
+            </li>
+            <li>
+                <a href=""><img src="img/img27.jpg" alt="" ></a>
+            </li>
+            <li>
+                <a href=""><img src="img/img28.jpg" alt="" ></a>
+            </li>
+
+
+
+        </ul>
+
+    </div>
+
+
+</article>
+
+
+
+
+    <div class="popup1">
+
+        <p>X</p>
+
+        <div class="popup2">
+            <div class="imgz">
+    
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    </section>
+    
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,6 +1,8 @@
 /* 언어설정 */
 @charset 'UTF-8';
 
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&family=Nanum+Myeongjo&display=swap');
+
 /* reset */
 * {margin: 0;
     padding: 0;}
@@ -9,6 +11,11 @@ a {text-decoration: none;
     color: #000;}
 img {border: none;
     vertical-align: bottom;}
+
+body {
+    font-family: 'Gowun Batang', serif;
+    font-family: 'Nanum Myeongjo', serif;
+}
 
 
 
@@ -38,21 +45,116 @@ header {
 }
 
 .gnb .topbar li {
+    
     font-size: 30px;
     color: #808080;
 }
 
-.topbar .uoo {
+.gnb .topbar li:nth-child(1) {
+    position: relative;
+}
+
+/* .topbar .uoo {
     width: 175px;
     height: 110px;
     background-image: url(img/Logo_Brooklyn.png);
     background-size: cover;
+    cursor: pointer;
+} */
+
+.topbar .uoo>a {
+    width: 175px;
+    height: 110px;
+    z-index: 10;
     
 }
 
-.gnb .topbar a {
-    
+.gnb .topbar li:hover .menuA  {
+    display: block;
 }
+
+.gnb .topbar .menuA {
+    position: absolute;
+    background-color: #F7F9EE;
+    width: 350px;
+    text-align: center;
+    padding-left: 40px;
+    display: none;
+    left: 0;
+    top: 50px;
+    z-index: 100;
+    border-radius: 10px;
+}
+
+
+
+
+.gnb .topbar .menuA li {
+    padding: 20px 10px ;
+    width: 80%;
+    
+    border-bottom: 1px solid #808080;
+}
+
+
+/* .gnb .topbar .yo {
+    display: inline;
+} */
+
+.gnb .topbar .menuA li:hover a {
+    font-weight: bold;
+
+}
+
+
+
+
+
+
+
+.gnb .topbar li:hover .menuB  {
+    display: block;
+}
+
+.gnb .topbar .menuB {
+    position: absolute;
+    background-color: #F7F9EE;
+    width: 350px;
+    text-align: center;
+    padding-left: 40px;
+    display: none;
+    right: 20px;
+    top: 80px;
+    border-radius: 10px;
+}
+
+.gnb .topbar li:nth-child(2) {
+    position: relative;
+}
+
+
+
+.gnb .topbar .menuB li {
+    padding: 20px 10px ;
+    width: 80%;
+    
+    border-bottom: 1px solid #808080;
+}
+
+
+/* .gnb .topbar .yo {
+    display: inline;
+} */
+
+.gnb .topbar .menuB li:hover a {
+    font-weight: bold;
+
+}
+
+
+
+
+
 
 .gnb .botbar {
     display: flex;
@@ -70,12 +172,20 @@ header {
     
 }
 
+.gnb .botbar li:hover {
+    font-weight: bold;
+    border-bottom: 1px solid #fff;
+}
+
 .gnb .botbar a {
     color: #fff;
 }
 
 
-
+.gnb .botbar .t54 {
+    position: absolute;
+    left: 20%;
+}
 
 
 /* box1 */
@@ -295,7 +405,7 @@ header {
 
 }
 
-.box3 .txtBox5 li:nth-child(3) {
+.box3 .txtBox5 .adda a {
     font-size: 18px;
     font-weight: 600;
     border: 2px solid #000;
@@ -304,7 +414,13 @@ header {
     align-items: center;
     width: 170px;
     height: 72px;
-    border-radius: 5px;
+    border-radius: 5px; 
+}
+
+.box3 .txtBox5 .adda:hover a {
+    background-color: #212121;
+    color: #fff;
+    cursor: pointer;
 }
 
 
@@ -390,6 +506,11 @@ header {
     cursor: pointer;
     
 
+}
+
+.box4 .txt1 .btnn:hover {
+    background-color: #B77C51;
+    color: #fff;
 }
 
 .box4 .OUR a {
@@ -1392,3 +1513,371 @@ margin-top: 80px;
     color: #656565;
 
 }
+
+
+
+
+/* sub */
+
+.boxa1 {
+    width: 100%;
+    height: 1000px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 87%;
+    background-image: url(img/TokkiBarBottles.jpg)
+}
+
+.boxa2 {
+    width: 100%;
+    height: 700px;
+    position: relative;
+    background-color: #6A5F5F;
+}
+
+.boxa2 h2 {
+    padding: 40px 50px;
+    font-size: 60px;
+}
+
+
+.boxa2 .tokki {
+    width: 320px;
+    height: 420px;
+    background-color: #FBF5D5;
+    position: absolute;
+    left: 250px;
+    top: 150px;
+    border-radius: 10px;
+}
+
+.boxa2 .tokki:nth-child(2) {
+
+    position: absolute;
+    left: 850px;
+    top: 150px;
+    
+}
+
+.boxa2 .tokki:nth-child(3) {
+
+    position: absolute;
+    left: 1450px;
+    top: 150px;
+    
+}
+.boxa2 .tokki .tokki1 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    box-shadow: #000 5px 5px 10px;
+    border-radius: 10px;
+}
+
+.boxa2 .tokki .tokki1 a {
+    position: absolute;
+    left: -150px;
+}
+
+.boxa2 .tokki .tokki1 img {
+    width: 88px;
+}
+
+.boxa2 .tokki .tokki1 .sell {
+    width: 100%;
+    height: 100%;
+    padding-top: 30px;
+    padding-left: 20px;
+    
+}
+
+.boxa2 .tokki .tokki1 .sell strong {
+    padding-top: 10px;
+    font-size: 32px;
+    
+}
+.boxa2 .tokki .tokki1 .sell p {
+    padding-top: 10px;
+    font-size: 24px;
+}
+
+.boxa2 .tokki .tokki1 .opt {
+    width: 100%;
+    margin-left: -50px;
+    padding-top: 10px;
+    font-size: 24px;
+}
+
+.boxa2 .tokki .tokki1 label {
+    padding-top: 10px;    
+    width: 150px;
+    padding-left: 50px;
+    
+}
+.boxa2 .tokki .tokki1 input {
+    padding-left: 0px;
+    width: 150px;
+    
+}
+
+
+.boxa2 .tokki .tokki1 .shop {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-items: center;
+    padding-top: 45.5px;
+    width: 100%;
+    height: 100px;
+
+    
+}
+.boxa2 .tokki .shop li {
+    text-align: center;
+    line-height: 2;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+.boxa2 .tokki .shop li a {
+    text-align: center;
+    line-height: 2;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 240px;
+}
+.boxa2 .tokki .shop li:nth-child(1) {
+    width: 50%;
+    height: 50px;
+    background-color: #0045A1;
+}
+
+.boxa2 .tokki .shop li:nth-child(2) {
+    width: 50%;
+    height: 50px;
+    background-color: #CE2A37;
+}
+
+.boxa2 .tokki .shop li:nth-child(3) {
+    width: 100%;
+    height: 50px;
+    background-color: #FEC220;
+    border-radius: 0 0 10px 10px;
+}
+
+/* boxa3 */
+
+.boxa3 {
+    width: 100%;
+    height: 700px;
+    position: relative;
+    background-color: #6A5F5F;
+} 
+
+.boxa3 .tokki {
+    width: 320px;
+    height: 420px;
+    background-color: #FBF5D5;
+    position: absolute;
+    left: 250px;
+    top: 150px;
+    border-radius: 10px;
+}
+
+.boxa3 .tokki:nth-child(2) {
+
+    position: absolute;
+    left: 850px;
+    top: 150px;
+    
+}
+
+.boxa3 .tokki:nth-child(3) {
+
+    position: absolute;
+    left: 1450px;
+    top: 150px;
+    
+}
+.boxa3 .tokki .tokki1 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    box-shadow: #000 5px 5px 10px;
+    border-radius: 10px;
+}
+
+.boxa3 .tokki .tokki1 a {
+    position: absolute;
+    left: -150px;
+}
+
+.boxa3 .tokki .tokki1 img {
+    width: 88px;
+}
+
+.boxa3 .tokki .tokki1 .sell {
+    width: 100%;
+    height: 100%;
+    padding-top: 30px;
+    padding-left: 20px;
+    
+}
+
+.boxa3 .tokki .tokki1 .sell strong {
+    padding-top: 10px;
+    font-size: 32px;
+    
+}
+.boxa3 .tokki .tokki1 .sell p {
+    padding-top: 10px;
+    font-size: 24px;
+}
+
+.boxa3 .tokki .tokki1 .opt {
+    width: 100%;
+    margin-left: -50px;
+    padding-top: 10px;
+    font-size: 24px;
+}
+
+.boxa3 .tokki .tokki1 label {
+    padding-top: 10px;    
+    width: 150px;
+    padding-left: 50px;
+    
+}
+.boxa3 .tokki .tokki1 input {
+    padding-left: 0px;
+    width: 150px;
+    
+}
+
+
+.boxa3 .tokki .tokki1 .shop {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-items: center;
+    padding-top: 45.5px;
+    width: 100%;
+    height: 100px;
+
+    
+}
+.boxa3 .tokki .shop li {
+    text-align: center;
+    line-height: 2;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+.boxa3 .tokki .shop li:nth-child(1) {
+    width: 50%;
+    height: 50px;
+    background-color: #0045A1;
+}
+
+.boxa3 .tokki .shop li:nth-child(2) {
+    width: 50%;
+    height: 50px;
+    background-color: #CE2A37;
+}
+
+.boxa3 .tokki .shop li:nth-child(3) {
+    width: 100%;
+    height: 50px;
+    background-color: #FEC220;
+    border-radius: 0 0 10px 10px;
+}
+
+.car {
+    width: 100%;
+    height: 100%;
+    background-color: rgba( 0, 0, 0, 0.7);
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+}
+
+.car h2 {
+    width: 80%;
+    height: 50px;
+    background-color: #fff;
+    margin: auto;
+    margin-top: 7%;
+    text-align:  center;
+    line-height: 3;
+    font-size: 32px;
+}
+.car .miz {
+    width: 80%;
+    height: 60%;
+    margin: auto;
+    background-color: #fff;
+}
+
+.car .imgs {
+    width: 80%;
+    height: 60%;
+    background-color: #fff;
+    margin: auto  ;
+    
+}
+
+.car .imgs img {
+    width: 100px;
+    height: auto;
+    margin: 60px 5px;
+    padding: 10px;
+}
+
+.car p {
+width: 80%;
+height: 60px;
+background-color: #6A5F5F;
+margin: auto;
+text-align: end;
+font-size: 32px;
+line-height: 2;
+color: #212121;
+
+}
+
+.car .btn10 {
+    margin: auto;
+    width: 40%;
+    display: flex;
+    /* justify-content: space-around; */
+    /* background-color: #6A5F5F; */
+    margin-top: -50px;
+    margin-left: 205px;
+    
+}
+.car button {
+    padding: 10px 20px;
+    margin-right: 20px;
+}
+
+.car .iogin {
+
+}
+
+.car .reset {
+
+}
+
+.car .empty {
+
+}
+
+
+
+
+
+
+
+
+
