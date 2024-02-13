@@ -16,6 +16,11 @@ body {
     position: relative;     
     overflow: hidden; 
     font-family: 'Jeju Myeongjo', serif;
+
+}
+
+html {
+    overflow: hidden; 
 }
 
 /* main */
@@ -30,7 +35,7 @@ body {
 
 }
 
-.main article {
+.main>article {
     width: 100%;
     height: 100vh;
     /* font-family: 'Danjo-bold-Regular'; */
@@ -44,6 +49,18 @@ body {
     
 }
 
+
+.main1>img {
+    width: 790px;
+    height: auto;
+    cursor: pointer;
+}
+
+.main1>img:hover {
+    animation: ani2 2s linear infinite;
+}
+
+
 .main article:nth-child(1) {
     background-color: #075FE3;
 }
@@ -54,14 +71,125 @@ body {
     flex-wrap: wrap;
     transform: translate(-0%, -0%);
     transition: opacity 0.8s ease-in-out, left 0.8s ease-in-out, top 0.8s ease-in-out;
-
+    display: flex;
 }
 
-.main .main2 .mainImg {
-
+.main .main2 .mainbg .profilebtn {
+    width: 200px; 
+    height: auto;
+    margin-right: 150px;
+    transition: all 0.5s;
 }
 
-.main .main2 img {
+.main .main2 .mainbg .profilebtn:hover {
+    transform: scale(1.2);
+}
+
+
+.main .main2 .mainbg1 .designbtn {
+    width: 200px; 
+    height: auto;
+    margin-left: 150px;
+    transition: all 0.5s;
+}
+
+.main .main2 .mainbg1 .designbtn:hover {
+    transform: scale(1.2);
+}
+
+.main .main2 .mainbg {
+    /* position: absolute;
+    left: 6%;
+    top: 31%; */
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    
+}
+
+.main .main2 .mainbg .btnbg {
+    position: absolute;
+    left: -55px;
+    top: 25px;
+    z-index: -10;
+    opacity: 0;
+} 
+
+.main .main2 .mainbg1 {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    
+}
+
+.main .main2 .mainbg1 .btnbg1 {
+    
+    position: absolute;
+    left: 75px;
+    top: 50px;
+    z-index: -10;
+    opacity: 0;
+    animation: ani1 2s linear infinite;
+    
+}
+
+
+@keyframes ani1 {
+    0% {transform: scale(0.6);}
+    20%{transform: scale(0.8);}
+    40% {transform: scale(1);}
+    50%{transform: scale(1.1);}
+    60% {transform: scale(1);}
+    80%{transform: scale(0.8);}
+    100%{transform: scale(0.6);}
+}
+
+
+@keyframes ani2 {
+    0% {opacity: 1;}
+    20%{opacity: 0.8;}
+    40% {opacity: 0.6;}
+    50%{opacity: 0.4;}
+    60% {opacity: 0.6;}
+    80%{opacity: 0.8;}
+    100%{opacity: 1;}
+}
+
+.main .main2 .main2Img {
+    width: 790px;
+    height: auto;
+}
+
+
+.main .main2 .mainbg .btnbg {
+    width: 400px;
+    height: auto;
+}
+
+.main .main2 .mainbg1 .btnbg1 {
+    width: 400px;
+    height: auto;
+}
+
+
+.main .main2 .main2Img {
+    position: relative;
+}
+
+
+
+
+
+.main .main2>img {
 
 }
 
@@ -114,21 +242,17 @@ body {
     
 }
 
-.profile .profileOne .homebtn {
-    position: absolute;
-    right: 0;
-    top: 0;
-}
 
 
-.profile .profileOne h2 {
+
+.profile .profileOne>h2 {
     font-size: 64px;
     text-align: center;
     margin-left: 30%;
     margin-bottom: 100px;
 }
 
-.profile .profileOne p {
+.profile .profileOne>p {
     font-size: 32px;
     width: 40%;
     margin-left: 30%;
@@ -136,19 +260,21 @@ body {
     text-align: center;
 }
 
-.profile .profileOne img {
+.profile .profileOne>img {
     
 }
 
-.profile .profileOne img:nth-child(1) {
+.profile .profileOne .profileOneImg {
     position: absolute;
     left: 0;
     top: 0;
     height: 100vh;
+    width: 500px;
 }
-.profile .profileOne img:nth-child(4) {
+.profile .profileOne .profileOneImg1 {
     margin-left: 30%;
-    margin-bottom: 100px;
+    margin-bottom: 0px;
+    width: 700px;
 }
 
 .profile .profileTwo {
@@ -176,15 +302,29 @@ body {
     /* height: 100vh; */
 }
 
-.profile .profileTwo img:nth-child(4) {
+.profile .profileTwo .profileTwoImg1 {
     position: absolute;
     right: 0;
     top: 0;
     height: 100vh;
+    width: 500px;
 }
-.profile .profileTwo img:nth-child(3) {
+.profile .profileTwo .profileTwoImg {
     margin-right: 30%;
-    margin-bottom: 100px;
+    margin-bottom: -30px;
+    width: 700px;
+}
+
+.profile .profileTwo .homebtn {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 200px;
+    transition: all 0.5s;
+}
+
+.profile .profileTwo .homebtn:hover {
+    transform: scale(0.8);
 }
 
 .profile .profileMain {
@@ -192,27 +332,38 @@ body {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
-.profile .profileMain>img {
+.profile .profileMain .profileTitle1 {
+    width: 50%;
+}
+
+.profile .profileMain .profileTitle {
+    width: 400px;
+    height: auto;
     margin-bottom: 40px;
-    margin-left: -13%;
+    margin-left: 200px;
+    
 }
 
 .profile .profileMain .profile1 {
     /* font-size: 60px; */
+    width: 50%;
+
 }
 
 
-.profile .profileMain .profile1 img {
+.profile .profileMain .profile1 .profile1Img {
     margin-bottom: 20px;
-    margin-left: -13.5%;
+    margin-left: 0px;
 
 }
 
 .profile .profileMain .profile1 h2 {
     font-size: 50px;
-    margin-left: -10%;
+    margin-left: 100px;
     color: #000;
 
 }   
@@ -223,16 +374,18 @@ body {
     color: #808080;
 }
 
-.profile .profileMain .profile1 strong {
+.profile .profileMain .profile1>p {
     font-size: 40px;
     margin-top: 20px;
-    margin-left: -10%;
-
+    margin-left: 100px;
+    font-weight: 800;
 }
 
 .profile .profileMain .profile2 {
-    margin: 50px;
+    /* margin: 50px 150px; */
     color: #808080;
+    width: 50%;
+    
 }
 
 .profile .profileMain .profile2 h2 {
@@ -240,8 +393,14 @@ body {
     margin-top: 20px;
 }
 
+.profile .profileMain .profile2 h2:nth-child(1) {
+    
+    margin-top: 120px;
+}
+
 .profile .profileMain .profile2 ul {
     margin-bottom: 20px;
+    margin-top: 0;
 }
 
 .profile .profileMain .profile2 li {
@@ -251,29 +410,61 @@ body {
 
 }
 
-.profile .profileMain .profile2 p {
+.profile .profileMain .profile2>p {
     font-size: 32px;
     margin-top: 20px;
+    margin-left: 20px;
 }
 
 .profile .profileMain .profile3 {
-    margin-bottom: -50px;
+    /* margin-bottom: -50px;
+    margin-right : 100px; */
+    width: 50%;
+    
 }
 
 .profile .profileMain .profile3 ul {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
 }
 
 .profile .profileMain .profile3 li {
-    padding-right: 40px;
+    padding-right: 55px;
+}
+
+.profile .profileMain .profile3 .profile3Img {
+    width: 150px;
+    height: 150px;
 }
 
 .profile .profileMain .homebtn {
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 220px;
+    top: 20px;
+    width: 200px;
+    transition: all 0.5s;
 }
+
+.profile .profileMain .homebtn:hover {
+    transform: scale(0.8);
+} 
+
+.profile .profileMain .designbtn1 {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 200px;
+    transition: all 0.5s;
+}
+
+.profile .profileMain .designbtn1:hover {
+    transform: scale(0.8);
+} 
+
+
 
 /* design */
 
@@ -321,6 +512,48 @@ body {
     background-color: #A6EFFF;
 }
 
+.design .designMain .designMainImg {
+    position: relative;
+}
+
+.design .designMain .designMainImg .resetbtn {
+    width: 600px;
+    height: 400px;
+    
+}
+.design .designMain .designMainImg .resetbtn:hover {
+    
+}
+
+.div56 {
+    
+    position: absolute;
+    background-color: #A6EFFF;
+    width: 600px;
+    height: 400px;
+    right: 0%;
+    top: 0%;
+    z-index: 10;
+    opacity: 1;
+}
+.pngImg {
+    width: 300px;
+    height: auto;
+    position: absolute;
+    left: -60%;
+    bottom: 70%;
+}
+
+@keyframes ani3 {
+    0% {width: 100%;opacity: 1; z-index: 10; }
+    20%{width: 83.4%; opacity: 1; z-index: 10;}
+    40% {width: 66.8%; opacity: 1; z-index: 10;}
+    50%{width: 51.2%; opacity: 1; z-index: 10;}
+    60% {width: 34.6%; opacity: 1; z-index: 10;}
+    80%{width: 17%; opacity: 1; z-index: 10;}
+    100%{width: 0px;  opacity: 1; z-index: 10;}
+}
+
 .design .designMain2 {
     background-color: #A6EFFF;
     position: relative;
@@ -329,24 +562,39 @@ body {
 
 .design .designMain2>img {
     position: absolute;
+    z-index: 1;
 }
 
+.designMain2 .homebtn1 {
+    position: relative; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 400px;
+    z-index: 0;
+    
 
-.designMain2 .homebtn1 img {
-    position: absolute;
+}
 
+.designMain2 .homebtn1>img {
+    position: absolute;  
 }
 
 
 .designMain2 .homebtn1 img:nth-child(1){
-    left: 24%;
-    top: 26%;
+    left: 0;
+    top: 5px;  
+    width:100%;
+    height: auto;
 }
 
 
 .designMain2 .homebtn1 img:nth-child(2){
-    left:39.5%;
-    top: 37%;
+    left: 100px;
+    top: 80px;  
+    width: 400px;
+    height: auto;
 }
 
 /* .design .designMain2 .homebtn1 {
@@ -355,23 +603,31 @@ body {
 } */
 
 .design .designMain2 .design1Btn {
-    left: 0;
-    top: 0;
+    left: 10px;
+    top: 10px;
+    width: 400px;
+    height: auto;
 }
 
 .design .designMain2 .design2Btn {
-    left: 0;
-    bottom: 0;
+    left: 10px;
+    bottom: 10px;
+    width: 400px;
+    height: auto;
 }
 
 .design .designMain2 .design3Btn {
-    right: 0;
-    top: 0;
+    right: 10px;
+    top: 10px;
+    width: 400px;
+    height: auto;
 }
 
 .design .designMain2 .design4Btn {
-    right: 0;
-    bottom: 0;
+    right: 10px;
+    bottom: 10px;
+    width: 350px;
+    height: auto;
 }
 
 
@@ -420,30 +676,54 @@ section.on {
     margin: 20px;
 }
 
+.design1 .designTitle .design_homebtn1 {
+    width: 180px;
+    height: auto;
+    transition: all 0.5s;
+}
+
+.design1 .designTitle .design_homebtn1:hover {
+    transform: scale(0.8);
+}
+.design1 .designTitle .TitleBtn .profilebtn1 {
+    width: 180px;
+    height: auto;
+    transition: all 0.5s;
+}
+
+.design1 .designTitle .TitleBtn .profilebtn1:hover {
+    transform: scale(0.8);
+}
+
 .design1 .designIn .designTxt {
     width:100%;
     height: auto;
     margin: auto;
 }
 
-.design1 .designIn .designTxt h2 {
+.design1 .designIn .designTxt>h2 {
     font-size: 32px;
 }
 
-.design1 .designIn .designTxt p {
+.design1 .designIn .designTxt>p {
     width: 50%;
     margin: 20px 0;
     font-size: 18px;
 }
 
 .design1 .designIn .designTxt .designImg {
-    width: 80%;
+    width: 100%;
     margin: auto;
 }
 
+.design1 .designIn .designTxt .designImg>img {
+    width: auto;
+    height: 500px;
+    margin-left: 150px;
+}
 .design1 .designIn .designButton {
-    width: 40%;
-    margin: 50px auto;
+    width: 60%;
+    margin: 20px auto;
     display: flex;
     justify-content: space-around;
     
@@ -481,35 +761,59 @@ section.on {
     margin: 20px;
 }
 
+.design2 .designTitle .design_homebtn2 {
+    width: 180px;
+    height: auto;
+    transition: all 0.5s;
+}
+
+.design2 .designTitle .design_homebtn2:hover {
+    transform: scale(0.8);
+}
+
+.design2 .designTitle .profilebtn2 {
+    width: 180px;
+    height: auto;
+    transition: all 0.5s;
+}
+
+.design2 .designTitle .profilebtn2:hover {
+    transform: scale(0.8);
+}
+
 .design2 .designIn .designTxt {
     width:100%;
     height: auto;
     margin: auto;
 }
 
-.design2 .designIn .designTxt h2 {
+.design2 .designIn .designTxt>h2 {
     font-size: 32px;
 }
 
-.design2 .designIn .designTxt p {
+.design2 .designIn .designTxt>p {
     width: 50%;
     margin: 20px 0;
     font-size: 18px;
 }
 
 .design2 .designIn .designTxt .designImg {
-    width: 80%;
+    width: 100%;
     margin: auto;
 }
 
+.design2 .designIn .designTxt .designImg>img {
+    width: auto;
+    height: 500px;
+    margin-left: 150px;
+}
 .design2 .designIn .designButton {
-    width: 40%;
-    margin: 50px auto;
+    width: 60%;
+    margin: 20px auto;
     display: flex;
     justify-content: space-around;
     
 }
-
 
 .design3 {
     position: absolute;
@@ -546,24 +850,50 @@ section.on {
     margin: auto;
 }
 
-.design3 .designIn .designTxt h2 {
+.design3 .designTitle .design_homebtn3 {
+    width: 180px;
+    height: auto;
+    transition: all 0.5s;
+}
+
+.design3 .designTitle .design_homebtn3:hover {
+    transform: scale(0.8);
+}
+
+.design3 .designTitle .profilebtn3 {
+    width: 180px;
+    height: auto;
+    transition: all 0.5s;
+}
+
+.design3 .designTitle .profilebtn3:hover {
+    transform: scale(0.8);
+}
+
+
+.design3 .designIn .designTxt>h2 {
     font-size: 32px;
 }
 
-.design3 .designIn .designTxt p {
+.design3 .designIn .designTxt>p {
     width: 50%;
     margin: 20px 0;
     font-size: 18px;
 }
 
 .design3 .designIn .designTxt .designImg {
-    width: 80%;
+    width: 100%;
     margin: auto;
 }
 
+.design3 .designIn .designTxt .designImg>img {
+    width: auto;
+    height: 500px;
+    margin-left: 150px;
+}
 .design3 .designIn .designButton {
-    width: 40%;
-    margin: 50px auto;
+    width: 60%;
+    margin: 20px auto;
     display: flex;
     justify-content: space-around;
     
@@ -590,6 +920,12 @@ section.on {
     z-index: -1;
 }
 
+.design4 .designTitle>img {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+}
+
 .design4 .slides {
     position: relative;
     overflow: hidden;
@@ -597,7 +933,7 @@ section.on {
 }
 
 .design4 .slider {
-    
+    width: 100%;
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
@@ -606,20 +942,22 @@ section.on {
     flex: 0 0 100%;
     box-sizing: border-box;
     text-align: center;
-    padding: 20px;
-    width: 1200px;
+    padding: 0px;
+    width: 100%;
 }
 
-.design4 .slide1 img {
-    width: 800px;
+.design4 .slide1>img {
+    width: 100%;
     height: auto;
-    margin-top: 200px;
+    margin-top: 100px;
 }
 
-.design4 .slide1 p {
+.design4 .slide1>p {
     width: 100%;
     height: auto;
     text-align: center;
+    font-size: 24px;
+    font-weight: 800px;
 }
 
 
@@ -643,12 +981,12 @@ section.on {
 } */
 
 .design4 .lrBtn {
- position: absolute;
+ position: absolute; 
  display: flex;
  justify-content: space-between;
  top: 50%;
- left: 24.5%;
- width: 1000px;
+ left: 0;
+ width: 100%;
 }
 
 .design4 .lrBtn>p {
@@ -668,12 +1006,29 @@ section.on {
 
 .design4 .design_homebtn4 {
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 16%;
+    top: 20px;
+        transition: all 0.5s;
+        width: 180px;
+        height: auto;
 }
 
+.design4 .design_homebtn4:hover {
+    transform: scale(0.8);
+}
 
+.design4 .profilebtn4 {
+    position: absolute;
+    right: 2.5%;
+    top: 20px;
+        transition: all 0.5s;
+        width: 180px;
+        height: auto;
+}
 
+.design4 .profilebtn4:hover {
+    transform: scale(0.8);
+}
 
 
 
@@ -705,13 +1060,21 @@ section.on {
 }
 
 .popup1 .popbtn {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     position: absolute;
-    right: 0;
+    right: 10%;
     top: 0;
-    background: #fff;
-    font-size: 120px;
+    /* background: #fff; */
+    font-size: 100px;
+    
+}
+.popup1 .popbtn a {
+    transition: 0.6s all;
+}
+
+.popup1 .popbtn a:hover {
+    color: #808080;
 }
 
 .popup1 .popdiv {
@@ -727,7 +1090,7 @@ section.on {
     display: none;
   }
 
-.popup1 .popdiv img {
+.popup1 .popdiv>img {
     width: 100%;
 
 }
@@ -747,13 +1110,21 @@ section.on {
 }
 
 .popup2 .popbtn {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     position: absolute;
-    right: 0;
+    right: 10%;
     top: 0;
-    background: #fff;
-    font-size: 120px;
+    /* background: #fff; */
+    font-size: 100px;
+    
+}
+.popup2 .popbtn a {
+    transition: 0.6s all;
+}
+
+.popup2 .popbtn a:hover {
+    color: #808080;
 }
 
 .popup2 .popdiv {
@@ -769,7 +1140,7 @@ section.on {
     display: none;
   } */
 
-.popup2 .popdiv img {
+.popup2 .popdiv>img {
     width: 100%;
 
 }
@@ -789,13 +1160,21 @@ section.on {
 }
 
 .popup3 .popbtn {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     position: absolute;
-    right: 0;
+    right: 10%;
     top: 0;
-    background: #fff;
-    font-size: 120px;
+    /* background: #fff; */
+    font-size: 100px;
+    
+}
+.popup3 .popbtn a {
+    transition: 0.6s all;
+}
+
+.popup3 .popbtn a:hover {
+    color: #808080;
 }
 
 .popup3 .popdiv {
@@ -830,6 +1209,12 @@ button {
     color: white;
     border-radius: 4px;
    }
+
+   button>a {
+    color: white;
+    font-size: 17px;
+    
+   }
    
    button:hover {
     background: rgb(2,0,36);
@@ -841,135 +1226,642 @@ button {
    }
 
 
-/* 1번구간 1280픽셀 이상 15999픽셀 이하 구간##################################################### */
 
+
+/* 1번구간 1280픽셀 이상 15999픽셀 이하 구간##################################################### */
 @media(min-width:1280px) and (max-width:1599px){
 
-    .main img {
-        width: 40%;
-    }
-
-    .main2>img:nth-child(1) {
-        width: 180px;
-    }
-
-    .main2>img:nth-child(2) {
-        width: 180px;
-
-    }
-
-    .main2>img:nth-child(4) {
-        width: 180px;
-
-    }
-
-    .main2>img:nth-child(5) {
-        width: 180px;
-    }
-
-    .profile {
-
-    }
-
-    .profileOne img {
-        width: 35%;
-    }
-
-    .profile .profileOne h2 {
-        font-size: 50px;
-    }
-
-    .profile .profileOne p{
-        font-size: 24px;
-    }
-
-
-    .profileTwo img {
-        width: 35%;
-    }
-
-    .profile .profileTwo h2 {
-        font-size: 50px;
-    }
-
-    .profile .profileTwo p{
-        font-size: 24px;
-    }
-
-    .profile .homebtn {
-        width: 150px;
-    }
-
-
-    .profile .profileMain>img {
-        width: 35%;
-    }
-
-    .profile .profileMain>img:nth-child(1) {
-        margin-left: -300px;
-        width: 400px;
-        margin-bottom: 20px;
-    }
-
-    .profile .profileMain .profile1 {
-        margin-left: 80px;
-    }
-
-    .profile .profileMain .profile1 img {
+    .main1>img {
         width: 600px;
-        margin-bottom: 50px;
+        height: auto;
+    }
+
+    .main .main2 .main2Img {
+        width: 600px;
+        height: auto;
     }
 
 
-    .profile .profileMain .profile1 h2 {
-        font-size: 45px;
-        width: 300px;
-    }
-
-    .profile .profileMain .profile1 span {
-        font-size: 35px;
-    }
-
-    .profile .profileMain .profile1 strong {
-        font-size: 35px;
-    }
-
-    .profile .profileMain .profile2  {
-        width: 100%;
-        margin-left: 0px;
-    }
-
-    .profile .profileMain .profile2 h2 {
-        font-size: 50px;
-    }
-
-    .profile .profileMain .profile2 li {
-        font-size: 28px;    
+    .main .main2 .mainbg .profilebtn {
+        width: 180px; 
+        height: auto;
+        margin-right: 50px;
+        transition: all 0.5s;
     }
     
-    .profile .profileMain .profile2 p {
-        font-size: 28px;    
+    .main .main2 .mainbg1 .designbtn {
+        width: 180px; 
+        height: auto;
+        margin-left: 50px;
+        transition: all 0.5s;
     }
 
-    .profile .profileMain .homebtn {
-        width: 150px;    
-    }
-
-
-    .profile .profileMain .profile3  {
-        width: 100%;
-        margin-left: -160px ;
-    }
-
-    .profile .profileMain .profile3 li {
-        padding: 0 10px; 
-        width: 10%;
-    }
-
-    .profile .profileMain .profile3 img {
-        width: 100%;
+    .main .main2 .mainbg {
+        /* position: absolute;
+        left: 6%;
+        top: 31%; */
+        position: relative;
+        width: 300px;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 1;
         
     }
+    
+    .main .main2 .mainbg .btnbg {
+        position: absolute;
+        left: -20px;
+        top: 25px;
+        z-index: -10;
+        opacity: 0;
+    } 
+    
+    .main .main2 .mainbg1 {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+    
+        
+    }
+    
+    .main .main2 .mainbg1 .btnbg1 {
+        
+        position: absolute;
+        left: 30px;
+        top: 40px;
+        z-index: -10;
+        opacity: 0;
+        animation: ani1 2s linear infinite;
+        
+    }
+
+    .main .main2 .mainbg .btnbg {
+        width: 300px;
+        height: auto;
+    }
+    
+    .main .main2 .mainbg1 .btnbg1 {
+        width: 300px;
+        height: auto;
+    }
+
+
+
+    .profile .profileOne {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        
+    }
+    
+    
+    
+    
+    .profile .profileOne>h2 {
+        font-size: 60px;
+        text-align: center;
+        margin-left: 30%;
+        margin-bottom: 100px;
+    }
+    
+    .profile .profileOne>p {
+        font-size: 28px;
+        width: 40%;
+        margin-left: 30%;
+        margin-bottom: 100px;
+        text-align: center;
+    }
+    
+    .profile .profileOne>img {
+        
+    }
+    
+    .profile .profileOne .profileOneImg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        width: 450px;
+    }
+    .profile .profileOne .profileOneImg1 {
+        margin-left: 30%;
+        margin-bottom: 0px;
+        width: 450px;
+    }
+    
+    .profile .profileTwo {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .profile .profileTwo h2 {
+        font-size: 60px;
+        text-align: center;
+        margin-right: 30%;
+        margin-bottom: 100px;
+    }
+    
+    .profile .profileTwo p {
+        font-size: 28px;
+        width: 40%;
+        margin-right: 30%;
+        margin-bottom: 100px;
+        text-align: center;
+    }
+    
+    .profile .profileTwo img {
+        /* height: 100vh; */
+    }
+    
+    .profile .profileTwo .profileTwoImg1 {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width: 450px;
+    }
+    .profile .profileTwo .profileTwoImg {
+        margin-right: 30%;
+        margin-bottom: -30px;
+        width: 450px;
+    }
+    
+    .profile .profileTwo .homebtn {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        transition: all 0.5s;
+
+        width: 150px;
+        height: auto;
+    }
+    
+    .profile .profileTwo .homebtn:hover {
+        transform: scale(0.8);
+    }
+    
+    .profile .profileMain {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    
+    .profile .profileMain .profileTitle1 {
+        width: 50%;
+    }
+    
+    .profile .profileMain .profileTitle {
+        width: 400px;
+        height: auto;
+        margin-bottom: 40px;
+        margin-left: 0;
+    }
+    
+    .profile .profileMain .profile1 {
+        /* font-size: 60px; */
+        width: 50%;
+    }
+    
+    
+    .profile .profileMain .profile1 .profile1Img {
+        margin-bottom: 20px;
+        margin-left: 0;
+    
+    }
+    
+    .profile .profileMain .profile1 h2 {
+        font-size: 45px;
+        margin-left: 0;
+        color: #000;
+    
+    }   
+    
+    
+    .profile .profileMain .profile1 span {
+        font-size: 35px;
+        color: #808080;
+    }
+    
+    .profile .profileMain .profile1>p {
+        font-size: 35px;
+        margin-top: 20px;
+        margin-left: 0;
+    
+    }
+    
+    .profile .profileMain .profile2 {
+        margin: 50px 100px;
+        color: #808080;
+        width: 50%;
+    }
+    
+    .profile .profileMain .profile2 h2 {
+        font-size: 60px;
+        margin-top: 20px;
+    }
+    
+    .profile .profileMain .profile2 ul {
+        margin-bottom: 20px;
+    }
+    
+    .profile .profileMain .profile2 li {
+        font-size: 28px;
+        padding-top: 20px;
+        padding-left: 20px;
+    
+    }
+    
+    .profile .profileMain .profile2>p {
+        font-size: 28px;
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    
+    .profile .profileMain .profile3 {
+        margin-bottom: -50px;
+        margin-right : 100px;
+        width: 50%;
+    }
+    
+    .profile .profileMain .profile3 ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .profile .profileMain .profile3 li {
+        padding-right: 35px;
+    }
+    
+    .profile .profileMain .profile3 .profile3Img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .profile .profileMain .homebtn {
+        position: absolute;
+        right: 190px;
+        top: 20px;
+        transition: all 0.5s;
+        width: 150px;
+        height: auto;
+    }
+    
+    .profile .profileMain .homebtn:hover {
+        transform: scale(0.8);
+    } 
+
+    .profile .profileMain .designbtn1 {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        width: 150px;
+        transition: all 0.5s;
+    }
+    
+    .profile .profileMain .designbtn1:hover {
+        transform: scale(0.8);
+    } 
+
+
+
+    /* 디자인 */
+
+    .design .designMain {
+        background-color: #A6EFFF;
+    }
+
+    .design .designMain .designMainImg .resetbtn {
+        width: 550px;
+        height: 400px;
+        
+    }
+
+    
+    .div56 {
+        
+        position: absolute;
+        background-color: #A6EFFF;
+        width: 550px;
+        height: 400px;
+        right: 0%;
+        top: 0%;
+        z-index: 10;
+        opacity: 1;
+    }
+    .pngImg {
+        width: 250px;
+        height: auto;
+        position: absolute;
+        left: -50%;
+        bottom: 70%;
+    }
+    
+    .design .designMain2 {
+        background-color: #A6EFFF;
+        position: relative;
+        /* opacity: 0; */
+    }
+    
+    .design .designMain2>img {
+        position: absolute;
+        z-index: 1;
+    }
+    
+    .designMain2 .homebtn1 {
+        position: relative; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 550px;
+        height: 400px;
+        z-index: 0;
+        
+    
+    }
+    
+    .designMain2 .homebtn1>img {
+        position: absolute;  
+    }
+    
+    
+    .designMain2 .homebtn1 img:nth-child(1){
+        left: 0;
+        top: 5px;  
+        width:100%;
+        height: auto;
+    }
+    
+    
+    .designMain2 .homebtn1 img:nth-child(2){
+        left: 100px;
+        top: 80px;  
+        width: 350px;
+        height: auto;
+    }
+    
+    /* .design .designMain2 .homebtn1 {
+        left: 50%;
+        top: 50%;
+    } */
+    
+    .design .designMain2 .design1Btn {
+        left: 50px;
+        top: 50px;
+        width: 350px;
+        height: auto;
+    }
+    
+    .design .designMain2 .design2Btn {
+        left: 50px;
+        bottom: 50px;
+        width: 350px;
+        height: auto;
+    }
+    
+    .design .designMain2 .design3Btn {
+        right: 50px;
+        top: 50px;
+        width: 350px;
+        height: auto;
+    }
+    
+    .design .designMain2 .design4Btn {
+        right: 50px;
+        bottom: 50px;
+        width: 300px;
+        height: auto;
+    }
+
+
+/* 디자인123 */
+
+
+.allDesign .design1Bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+
+}
+
+.allDesign .design1Bg>img {
+
+    width: 100%;
+    height: 100vh;
+}
+
+.allDesign .designIn {
+    width: 60%;
+    height: auto;
+    z-index: 10;
+    margin: auto;
+}
+
+.allDesign .designTitle {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.allDesign .designTitle>img {
+    width: 400px;
+    height: auto;
+}
+
+
+
+.allDesign .designTitle .allBtn {
+    width: 180px;
+    height: auto;
+    transition: all 0.5s;
+}
+
+.allDesign .designTitle .allBtn:hover {
+    transform: scale(0.8);
+}
+.allDesign .designTitle .TitleBtn .allBtn1 {
+    width: 180px;
+    height: auto;
+    transition: all 0.5s;
+}
+
+.allDesign .designTitle .TitleBtn .allBtn1:hover {
+    transform: scale(0.8);
+}
+
+.allDesign .designIn .designTxt {
+    width:100%;
+    height: auto;
+    margin: auto;
+}
+
+.allDesign .designIn .designTxt>h2 {
+    font-size: 32px;
+}
+
+.allDesign .designIn .designTxt>p {
+    width: 50%;
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+.allDesign .designIn .designTxt .designImg {
+    width: 100%;
+    margin: auto;
+}
+
+.allDesign .designIn .designTxt .designImg>img {
+    width: auto;
+    height: 500px;
+    
+}
+
+.allDesign .designIn .designButton {
+    width: 80%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+/* 디자인4 */
+
+
+.design4 .design1Bg>img {
+    z-index: -1;
+    width: 90%;
+    height: 100vh;
+}
+
+
+.design4 .designTitle>img {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    width: 350px;
+}
+
+.design4 .slides {
+    position: relative;
+    overflow: hidden;
+    width: 800px;
+}
+
+.design4 .slider {
+    width: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.design4 .slide1 {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 0px;
+    width: 100%;
+}
+
+.design4 .slide1>img {
+    width: 100%;
+    height: auto;
+    margin-top: 100px;
+}
+
+.design4 .slide1>p {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 800px;
+}
+
+.design4 .lrBtn {
+    position: absolute; 
+    display: flex;
+    justify-content: space-between;
+    top: 50%;
+    left: 0;
+    width: 100%;
+}
+
+.design4 .lrBtn>p {
+
+    font-size: 40px;
+    color: #808080;
+}
+
+.design4 .lrBtn .left {
+    left: 0;
+}
+
+.design4 .lrBtn .right {
+    right: 0;
+}
+
+
+.design4 .design_homebtn4 {
+    position: absolute;
+    right: 16%;
+    top: 20px;
+        transition: all 0.5s;
+        width: 180px;
+        height: auto;
+}
+
+.design4 .design_homebtn4:hover {
+    transform: scale(0.8);
+}
+
+.design4 .profilebtn4 {
+    position: absolute;
+    right: 2.5%;
+    top: 20px;
+        transition: all 0.5s;
+        width: 180px;
+        height: auto;
+}
+
+.design4 .profilebtn4:hover {
+    transform: scale(0.8);
+}
+
+
+/* 버튼 */
+
+button {
+    font-size: 17px;
+    padding: 0.5em 2em;
+    border: transparent;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    background: dodgerblue;
+    color: white;
+    border-radius: 4px;
+   }
+
+   button>a {
+    color: white;
+    font-size: 17px;
+    
+   }
+   
+   button:hover {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(30,144,255,1) 0%, rgba(0,212,255,1) 100%);
+   }
+   
+   button:active {
+    transform: translate(0em, 0.2em);
+   }
+
+
 
 
 }
@@ -981,3 +1873,3497 @@ button {
 
 
 
+/* 2번구간 1024px이상 1279px이하구간################ */
+@media(min-width:1024px) and (max-width:1279px){
+
+    .main1>img {
+        width: 500px;
+        height: auto;
+    }
+
+    /* .main2>img:nth-child(1) {
+        width: 150px;
+    }
+
+    .main2>img:nth-child(3) {
+        width: 150px;
+
+    } */
+
+    .main .main2 .main2Img {
+        width: 500px;
+        height: auto;
+    }
+
+    /* .main2>img:nth-child(4) {
+        width: 150px;
+
+    }
+
+    .main2>img:nth-child(5) {
+        width: 150px;
+    } */
+
+
+    .main .main2 .mainbg .profilebtn {
+        width: 150px; 
+        height: auto;
+        margin-right: 30px;
+        transition: all 0.5s;
+    }
+    
+    .main .main2 .mainbg1 .designbtn {
+        width: 150px; 
+        height: auto;
+        margin-left: 30px;
+        transition: all 0.5s;
+    }
+
+    .main .main2 .mainbg {
+        /* position: absolute;
+        left: 6%;
+        top: 31%; */
+        position: relative;
+        width: 250px;
+        height: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 1;
+        
+    }
+    
+    .main .main2 .mainbg .btnbg {
+        position: absolute;
+        left: -20px;
+        top: 25px;
+        z-index: -10;
+        opacity: 0;
+    } 
+    
+    .main .main2 .mainbg1 {
+        position: relative;
+        width: 250px;
+        height: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+    
+        
+    }
+    
+    .main .main2 .mainbg1 .btnbg1 {
+        
+        position: absolute;
+        left: 20px;
+        top: 35px;
+        z-index: -10;
+        opacity: 0;
+        animation: ani1 2s linear infinite;
+        
+    }
+
+    .main .main2 .mainbg .btnbg {
+        width: 250px;
+        height: auto;
+    }
+    
+    .main .main2 .mainbg1 .btnbg1 {
+        width: 250px;
+        height: auto;
+    }
+
+
+
+    .profile .profileOne>h2 {
+        font-size: 50px;
+        text-align: center;
+        margin-left: 37%; 
+        /* margin:  100px auto ; */
+        margin-bottom: 100px; 
+    }
+    
+    .profile .profileOne>p {
+        font-size: 24px;
+        width: 40%;
+        margin-left: 37%;
+        margin-bottom: 100px;
+        text-align: center;
+    }
+    
+    .profile .profileOne>img {
+        
+    }
+    
+    .profile .profileOne .profileOneImg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        width: 400px;
+    }
+    .profile .profileOne .profileOneImg1 {
+        margin-left: 37%;
+        margin-bottom: 0px;
+        width: 400px;
+    }
+    
+    .profile .profileTwo {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .profile .profileTwo h2 {
+        font-size: 50px;
+        text-align: center;
+        margin-right: 37%;
+        margin-bottom: 100px;
+    }
+    
+    .profile .profileTwo p {
+        font-size: 24px;
+        width: 40%;
+        margin-right: 37%;
+        margin-bottom: 100px;
+        text-align: center;
+    }
+    
+    .profile .profileTwo img {
+        /* height: 100vh; */
+    }
+    
+    .profile .profileTwo .profileTwoImg1 {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width: 400px;
+    }
+    .profile .profileTwo .profileTwoImg {
+        margin-right: 37%;
+        margin-bottom: -30px;
+        width: 400px;
+    }
+    
+    .profile .profileTwo .homebtn {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        transition: all 0.5s;
+
+        width: 150px;
+        height: auto;
+    }
+    
+    .profile .profileTwo .homebtn:hover {
+        transform: scale(0.8);
+    }
+    
+    .profile .profileMain {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    
+    .profile .profileMain .profileTitle1 {
+        width: 50%;
+    }
+    
+    .profile .profileMain .profileTitle {
+        width: 400px;
+        height: auto;
+        margin-bottom: 40px;
+        margin-left: 0;
+    }
+    
+    .profile .profileMain .profile1 {
+        /* font-size: 60px; */
+        width: 50%;
+    }
+    
+    
+    .profile .profileMain .profile1 .profile1Img {
+        margin-bottom: 20px;
+        margin-left: 0;
+        width: 500px;
+    }
+    
+    .profile .profileMain .profile1 h2 {
+        font-size: 45px;
+        margin-left: 0;
+        color: #000;
+    
+    }   
+    
+    
+    .profile .profileMain .profile1 span {
+        font-size: 30px;
+        color: #808080;
+    }
+    
+    .profile .profileMain .profile1>p {
+        font-size: 30px;
+        margin-top: 20px;
+        margin-left: 0;
+    
+    }
+    
+    .profile .profileMain .profile2 {
+        /* margin: 50px 100px; */
+        color: #808080;
+        width: 50%;
+    }
+    
+    .profile .profileMain .profile2 h2 {
+        font-size: 50px;
+        margin-top: 20px;
+    }
+    
+    .profile .profileMain .profile2 ul {
+        margin-bottom: 20px;
+    }
+    
+    .profile .profileMain .profile2 li {
+        font-size: 24px;
+        padding-top: 20px;
+        padding-left: 20px;
+    
+    }
+    
+    .profile .profileMain .profile2>p {
+        font-size: 24px;
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    
+    .profile .profileMain .profile3 {
+        /* margin-bottom: -50px;
+        margin-right : 100px; */
+        width: 50%;
+    }
+    
+    .profile .profileMain .profile3 ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .profile .profileMain .profile3 li {
+        padding-right: 25px;
+    }
+    
+    .profile .profileMain .profile3 .profile3Img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .profile .profileMain .homebtn {
+        position: absolute;
+        right: 170px;
+        top: 20px;
+        transition: all 0.5s;
+        width: 150px;
+        height: auto;
+    }
+    
+    .profile .profileMain .homebtn:hover {
+        transform: scale(0.8);
+    } 
+
+    .profile .profileMain .designbtn1 {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        width: 150px;
+        transition: all 0.5s;
+    }
+    
+    .profile .profileMain .designbtn1:hover {
+        transform: scale(0.8);
+    } 
+
+
+    /* 디자인 */
+
+    .design .designMain {
+        background-color: #A6EFFF;
+    }
+    
+    .design .designMain .designMainImg .resetbtn {
+        width: 500px;
+        height: 300px;
+        
+    }
+
+    
+    .div56 {
+        
+        position: absolute;
+        background-color: #A6EFFF;
+        width: 500px;
+        height: 300px;
+        right: 0%;
+        top: 0%;
+        z-index: 10;
+        opacity: 1;
+    }
+    .pngImg {
+        width: 200px;
+        height: auto;
+        position: absolute;
+        left: -40%;
+        bottom: 70%;
+    }
+
+
+    .design .designMain2 {
+        background-color: #A6EFFF;
+        position: relative;
+        /* opacity: 0; */
+    }
+    
+    .design .designMain2>img {
+        position: absolute;
+        z-index: 1;
+    }
+    
+    .designMain2 .homebtn1 {
+        position: relative; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 500px;
+        height: 300px;
+        z-index: 0;
+        
+    
+    }
+    
+    .designMain2 .homebtn1>img {
+        position: absolute;  
+    }
+    
+    
+    .designMain2 .homebtn1 img:nth-child(1){
+        left: 0;
+        top: 5px;  
+        width:100%;
+        height: auto;
+    }
+    
+    
+    .designMain2 .homebtn1 img:nth-child(2){
+        left: 100px;
+        top: 80px;  
+        width: 300px;
+        height: auto;
+    }
+    
+    /* .design .designMain2 .homebtn1 {
+        left: 50%;
+        top: 50%;
+    } */
+    
+    .design .designMain2 .design1Btn {
+        left: 50px;
+        top: 50px;
+        width: 350px;
+        height: auto;
+    }
+    
+    .design .designMain2 .design2Btn {
+        left: 50px;
+        bottom: 50px;
+        width: 350px;
+        height: auto;
+    }
+    
+    .design .designMain2 .design3Btn {
+        right: 50px;
+        top: 50px;
+        width: 350px;
+        height: auto;
+    }
+    
+    .design .designMain2 .design4Btn {
+        right: 50px;
+        bottom: 50px;
+        width: 300px;
+        height: auto;
+    }
+
+
+/* 디자인123 */
+
+
+
+.allDesign .design1Bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+
+}
+
+.allDesign .design1Bg>img {
+
+    width: 90%;
+    height: 100vh;
+}
+
+.allDesign .designIn {
+    width: 60%;
+    height: auto;
+    z-index: 10;
+    margin: auto;
+}
+
+.allDesign .designTitle {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.allDesign .designTitle>img {
+    width: 350px;
+    height: auto;
+}
+
+
+
+.allDesign .designTitle .allBtn {
+    width: 150px;
+    height: auto;
+    transition: all 0.5s;
+}
+
+.allDesign .designTitle .allBtn:hover {
+    transform: scale(0.8);
+}
+.allDesign .designTitle .TitleBtn .allBtn1 {
+    width: 150px;
+    height: auto;
+    transition: all 0.5s;
+}
+
+.allDesign .designTitle .TitleBtn .allBtn1:hover {
+    transform: scale(0.8);
+}
+
+.allDesign .designIn .designTxt {
+    width:100%;
+    height: auto;
+    margin: auto;
+}
+
+.allDesign .designIn .designTxt>h2 {
+    font-size: 32px;
+}
+
+.allDesign .designIn .designTxt>p {
+    width: 60%;
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+.allDesign .designIn .designTxt .designImg {
+    width: 100%;
+    margin: auto;
+}
+
+.allDesign .designIn .designTxt .designImg>img {
+    width: auto;
+    height: 500px;
+    margin-left: -50px;
+}
+
+
+.allDesign .designIn .designButton {
+    width: 80%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.allDesign .designIn .designButton>button {
+
+    margin: 0px 20px ;
+
+    
+}
+
+
+
+
+
+/* 디자인4 */
+
+
+
+.design4 .design1Bg>img {
+    z-index: -1;
+    width: 90%;
+    height: 100vh;
+}
+
+
+
+.design4 .designTitle>img {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    width: 300px;
+}
+
+.design4 .slides {
+    position: relative;
+    overflow: hidden;
+    width: 600px;
+}
+
+.design4 .slider {
+    width: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.design4 .slide1 {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 0px;
+    width: 100%;
+}
+
+.design4 .slide1>img {
+    width: 100%;
+    height: auto;
+    margin-top: 100px;
+}
+
+.design4 .slide1>p {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 800px;
+}
+
+.design4 .lrBtn {
+    position: absolute; 
+    display: flex;
+    justify-content: space-between;
+    top: 50%;
+    left: 0;
+    width: 100%;
+}
+
+.design4 .lrBtn>p {
+
+    font-size: 40px;
+    color: #808080;
+}
+
+.design4 .lrBtn .left {
+    left: 0;
+}
+
+.design4 .lrBtn .right {
+    right: 0;
+}
+
+
+.design4 .design_homebtn4 {
+    position: absolute;
+    right: 16%;
+    top: 20px;
+        transition: all 0.5s;
+        width: 150px;
+        height: auto;
+}
+
+.design4 .design_homebtn4:hover {
+    transform: scale(0.8);
+}
+
+.design4 .profilebtn4 {
+    position: absolute;
+    right: 2.5%;
+    top: 20px;
+        transition: all 0.5s;
+        width: 150px;
+        height: auto;
+}
+
+.design4 .profilebtn4:hover {
+    transform: scale(0.8);
+}
+
+
+
+
+/* 버튼 */
+
+button {
+    font-size: 15px;
+    padding: 0.5em 2em;
+    border: transparent;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    background: dodgerblue;
+    color: white;
+    border-radius: 4px;
+   }
+
+   button>a {
+    color: white;
+    font-size: 15px;
+    
+   }
+   
+   button:hover {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(30,144,255,1) 0%, rgba(0,212,255,1) 100%);
+   }
+   
+   button:active {
+    transform: translate(0em, 0.2em);
+   }
+
+
+
+}
+
+
+
+
+
+/* 3번구간 780px이상 1023px이하구간################ */
+@media(min-width:780px) and (max-width:1023px){
+
+    .main1>img {
+        width: 500px;
+        height: auto;
+    }
+
+    .main .main2  {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .main2div {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main .main2 .main2Img {
+        width: 500px;
+        height: auto;
+    }
+
+    .main .main2 .mainbg .profilebtn {
+        width: 180px; 
+        height: auto;
+        margin-right: 0px;
+        
+        transition: all 0.5s;
+    }
+    
+    .main .main2 .mainbg1 .designbtn {
+        width: 180px; 
+        height: auto;
+        margin-left: 0px;
+        
+        transition: all 0.5s;
+    }
+
+    .main .main2 .mainbg {
+        /* position: absolute;
+        left: 6%;
+        top: 31%; */
+        position: relative;
+        width: 400px;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 1;
+        margin-top: 0px;
+    }
+    
+    .main .main2 .mainbg .btnbg {
+        position: absolute;
+        left: 70px;
+        top: -10px;
+        z-index: -10;
+        opacity: 0;
+        
+    } 
+    
+    .main .main2 .mainbg1 {
+        position: relative;
+        width: 400px;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0px;
+        
+        
+    }
+    
+    .main .main2 .mainbg1 .btnbg1 {
+        
+        position: absolute;
+        left: 80px;
+        top: 15px;
+        z-index: -10;
+        opacity: 0;
+        animation: ani1 2s linear infinite;
+        
+    }
+
+    .main .main2 .mainbg .btnbg {
+        width: 250px;
+        height: auto;
+    }
+    
+    .main .main2 .mainbg1 .btnbg1 {
+        width: 250px;
+        height: auto;
+    }
+
+    
+    .profile .profileOne>h2 {
+        font-size: 50px;
+        text-align: center;
+        margin-left: 37%; 
+        /* margin:  100px auto ; */
+        margin-bottom: 100px; 
+        color: white;
+        text-shadow: 3px 3px 3px gray;
+    }
+    
+    .profile .profileOne>p {
+        font-size: 24px;
+        width: 40%;
+        margin-left: 37%;
+        margin-bottom: 100px;
+        text-align: center;
+        color: white;
+    }
+    
+    .profile .profileOne>img {
+        
+    }
+    
+    .profile .profileOne .profileOneImg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+        z-index: -1;
+    }
+    .profile .profileOne .profileOneImg1 {
+        margin-left: 37%;
+        margin-bottom: 0px;
+        width: 400px;
+    }
+    
+    .profile .profileTwo {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .profile .profileTwo h2 {
+        font-size: 50px;
+        text-align: center;
+        margin-right: 37%;
+        margin-bottom: 100px;
+        color: white;
+        text-shadow: 3px 3px 3px gray;
+    }
+    
+    .profile .profileTwo p {
+        font-size: 24px;
+        width: 40%;
+        margin-right: 37%;
+        margin-bottom: 100px;
+        text-align: center;
+        color: white;
+    }
+    
+    .profile .profileTwo img {
+        /* height: 100vh; */
+    }
+    
+    .profile .profileTwo .profileTwoImg1 {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width:100%;
+        z-index: -1;
+    }
+    .profile .profileTwo .profileTwoImg {
+        margin-right: 37%;
+        margin-bottom: -30px;
+        width: 400px;
+    }
+    
+    .profile .profileTwo .homebtn {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        transition: all 0.5s;
+
+        width: 150px;
+        height: auto;
+    }
+    
+    .profile .profileTwo .homebtn:hover {
+        transform: scale(0.8);
+    }
+    
+    .profile .profileMain {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    
+    .profile .profileMain .profileTitle1 {
+        width: 50%;
+    }
+    
+    .profile .profileMain .profileTitle {
+        width: 300px;
+        height: auto;
+        margin-bottom: 40px;
+        margin-left: 0;
+    }
+    
+    .profile .profileMain .profile1 {
+        /* font-size: 60px; */
+        width: 50%;
+    }
+    
+    
+    .profile .profileMain .profile1 .profile1Img {
+        margin-bottom: 20px;
+        margin-left: 0;
+        width: 400px;
+    }
+    
+    .profile .profileMain .profile1 h2 {
+        font-size: 40px;
+        margin-left: 0;
+        color: #000;
+    
+    }   
+    
+    
+    .profile .profileMain .profile1 span {
+        font-size: 25px;
+        color: #808080;
+    }
+    
+    .profile .profileMain .profile1>p {
+        font-size: 25px;
+        margin-top: 20px;
+        margin-left: 0;
+    
+    }
+    
+    .profile .profileMain .profile2 {
+        margin: 50px 100px;
+        color: #808080;
+        width: 50%;
+    }
+    
+    .profile .profileMain .profile2 h2 {
+        font-size: 40px;
+        margin-top: 20px;
+    }
+    
+    .profile .profileMain .profile2 ul {
+        margin-bottom: 20px;
+    }
+    
+    .profile .profileMain .profile2 li {
+        font-size: 20px;
+        padding-top: 20px;
+        padding-left: 20px;
+    
+    }
+    
+    .profile .profileMain .profile2>p {
+        font-size: 20px;
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    
+    .profile .profileMain .profile3 {
+        margin-bottom: -50px;
+        margin-right : 100px;
+        width: 50%;
+    }
+    
+    .profile .profileMain .profile3 ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .profile .profileMain .profile3 li {
+        padding-right: 40px;
+    }
+    
+    .profile .profileMain .profile3 .profile3Img {
+        width: 135px;
+        height: 135px;
+    }
+    
+    .profile .profileMain .homebtn {
+        position: absolute;
+        right: 150px;
+        top: 20px;
+        transition: all 0.5s;
+        width: 120px;
+        height: auto;
+    }
+    
+    .profile .profileMain .homebtn:hover {
+        transform: scale(0.8);
+    } 
+
+
+    .profile .profileMain .designbtn1 {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        width: 120px;
+        transition: all 0.5s;
+    }
+    
+    .profile .profileMain .designbtn1:hover {
+        transform: scale(0.8);
+    } 
+
+
+    /* 디자인 */
+
+    .design .designMain {
+        background-color: #A6EFFF;
+    }
+    
+    .design .designMain .designMainImg .resetbtn {
+        width: 450px;
+        height: 300px;
+        
+    }
+
+    
+    .div56 {
+        
+        position: absolute;
+        background-color: #A6EFFF;
+        width: 450px;
+        height: 300px;
+        right: 0%;
+        top: 0%;
+        z-index: 10;
+        opacity: 1;
+    }
+    .pngImg {
+        width: 150px;
+        height: auto;
+        position: absolute;
+        left: -35%;
+        bottom: 75%;
+    }
+
+
+    .design .designMain2 {
+        background-color: #A6EFFF;
+        position: relative;
+        /* opacity: 0; */
+    }
+    
+    .design .designMain2>img {
+        position: absolute;
+        z-index: 1;
+    }
+    
+    .designMain2 .homebtn1 {
+        position: relative; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 450px;
+        height: 300px;
+        z-index: 0;
+        
+    
+    }
+    
+    .designMain2 .homebtn1>img {
+        position: absolute;  
+    }
+    
+    
+    .designMain2 .homebtn1 img:nth-child(1){
+        left: 0;
+        top: 5px;  
+        width:100%;
+        height: auto;
+    }
+    
+    
+    .designMain2 .homebtn1 img:nth-child(2){
+        left: 100px;
+        top: 80px;  
+        width: 250px;
+        height: auto;
+    }
+    
+    /* .design .designMain2 .homebtn1 {
+        left: 50%;
+        top: 50%;
+    } */
+    
+    .design .designMain2 .design1Btn {
+        left: 50px;
+        top: 50px;
+        width: 300px;
+        height: auto;
+    }
+    
+    .design .designMain2 .design2Btn {
+        left: 50px;
+        bottom: 50px;
+        width: 300px;
+        height: auto;
+    }
+    
+    .design .designMain2 .design3Btn {
+        right: 50px;
+        top: 50px;
+        width: 300px;
+        height: auto;
+    }
+    
+    .design .designMain2 .design4Btn {
+        right: 50px;
+        bottom: 50px;
+        width: 250px;
+        height: auto;
+    }
+
+
+
+
+/* 디자인123 */
+
+
+
+.allDesign .design1Bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+
+}
+
+.allDesign .design1Bg>img {
+
+    width: 70%;
+    height: 100vh;
+}
+
+.allDesign .designIn {
+    width: 60%;
+    height: auto;
+    z-index: 10;
+    margin: auto;
+}
+
+.allDesign .designTitle {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.allDesign .designTitle>img {
+    width: 300px;
+    height: auto;
+}
+
+
+
+.allDesign .designTitle .allBtn {
+    width: 120px;
+    height: auto;
+    transition: all 0.5s;
+}
+
+.allDesign .designTitle .allBtn:hover {
+    transform: scale(0.8);
+}
+.allDesign .designTitle .TitleBtn .allBtn1 {
+    width: 120px;
+    height: auto;
+    transition: all 0.5s;
+}
+
+.allDesign .designTitle .TitleBtn .allBtn1:hover {
+    transform: scale(0.8);
+}
+
+.allDesign .designIn .designTxt {
+    width:100%;
+    height: auto;
+    margin: auto;
+}
+
+.allDesign .designIn .designTxt>h2 {
+    font-size: 32px;
+}
+
+.allDesign .designIn .designTxt>p {
+    width: 70%;
+    height: 50px;
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+.allDesign .designIn .designTxt .designImg {
+    width: 100%;
+    height: 100%;
+    /* margin: 0px 10% 0px 10%; */
+    
+}
+
+.allDesign .designIn .designTxt .designImg>img {
+    width: auto;
+    height: 500px;
+    margin-left: -100px;
+}
+
+
+.allDesign .designIn .designButton {
+    width: 80%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.allDesign .designIn .designButton>button {
+
+    margin: 0px 20px ;
+
+    
+}
+
+
+
+/* 디자인4 */
+
+
+.design4 .design1Bg>img {
+    z-index: -1;
+    width: 70%;
+    height: 100vh;
+}
+
+
+.design4 .designTitle>img {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    width: 300px;
+}
+
+.design4 .slides {
+    position: relative;
+    overflow: hidden;
+    width: 500px;
+}
+
+.design4 .slider {
+    width: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.design4 .slide1 {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 0px;
+    width: 100%;
+}
+
+.design4 .slide1>img {
+    width: 100%;
+    height: auto;
+    margin-top: 100px;
+}
+
+.design4 .slide1>p {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 800px;
+}
+
+.design4 .lrBtn {
+    position: absolute; 
+    display: flex;
+    justify-content: space-between;
+    top: 50%;
+    left: 0;
+    width: 100%;
+}
+
+.design4 .lrBtn>p {
+
+    font-size: 32px;
+    color: #808080;
+}
+
+.design4 .lrBtn .left {
+    left: 0;
+}
+
+.design4 .lrBtn .right {
+    right: 0;
+}
+
+
+.design4 .design_homebtn4 {
+    position: absolute;
+    right: 16%;
+    top: 20px;
+        transition: all 0.5s;
+        width: 120px;
+        height: auto;
+}
+
+.design4 .design_homebtn4:hover {
+    transform: scale(0.8);
+}
+
+.design4 .profilebtn4 {
+    position: absolute;
+    right: 2.5%;
+    top: 20px;
+        transition: all 0.5s;
+        width: 120px;
+        height: auto;
+}
+
+.design4 .profilebtn4:hover {
+    transform: scale(0.8);
+}
+
+
+
+
+/* 버튼 */
+
+button {
+    font-size: 15px;
+    padding: 0.5em 2em;
+    border: transparent;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    background: dodgerblue;
+    color: white;
+    border-radius: 4px;
+   }
+
+   button>a {
+    color: white;
+    font-size: 15px;
+    
+   }
+   
+   button:hover {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(30,144,255,1) 0%, rgba(0,212,255,1) 100%);
+   }
+   
+   button:active {
+    transform: translate(0em, 0.2em);
+   }
+
+
+
+
+
+}
+
+
+
+
+/* 4번구간 640px이상 779px이하구간################ */
+@media(min-width:640px) and (max-width:779px){
+
+    .main1>img {
+        width: 500px;
+        height: auto;
+    }
+
+    .main .main2  {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .main .main2 .main2div {
+        width: 100%;
+        height: 90%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: -11;
+    }
+
+    .main .main2 .main2Img {
+        width: 500px;
+        height: auto;
+    }
+
+    .main .main2 .mainbg .profilebtn {
+        width: 150px; 
+        height: auto;
+        margin-right: 30px;
+        transition: all 0.5s;
+    }
+    
+    .main .main2 .mainbg1 .designbtn {
+        width: 150px; 
+        height: auto;
+        margin-left: 30px;
+        transition: all 0.5s;
+    }
+
+    .main .main2 .mainbg {
+        /* position: absolute;
+        left: 6%;
+        top: 31%; */
+        position: relative;
+        width: 300px;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 83%;
+    }
+    
+    .main .main2 .mainbg .btnbg {
+        position: absolute;
+        left: 15px;
+        top: 30px;
+        z-index: -10;
+        opacity: 0;
+    } 
+    
+    .main .main2 .mainbg1 {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 83%;
+    
+        
+    }
+    
+    .main .main2 .mainbg1 .btnbg1 {
+        
+        position: absolute;
+        left: 45px;
+        top: 55px;
+        z-index: -10;
+        opacity: 0;
+        animation: ani1 2s linear infinite;
+        
+    }
+
+    .main .main2 .mainbg .btnbg {
+        width: 250px;
+        height: auto;
+    }
+    
+    .main .main2 .mainbg1 .btnbg1 {
+        width: 250px;
+        height: auto;
+    }
+
+
+
+    .profile .profileOne>h2 {
+        font-size: 50px;
+        text-align: center;
+        /* margin-left: 37%;  */
+        /* margin:  100px auto ; */
+        margin:  50px auto ;
+        /* margin-bottom: 100px;  */
+        color: white;
+        text-shadow: 3px 3px 3px gray;
+    }
+    
+    .profile .profileOne>p {
+        font-size: 24px;
+        width: 60%;
+        /* margin-left: 37%; */
+        margin:  50px auto ;
+        /* margin-bottom: 100px; */
+        text-align: center;
+        color: white;
+    }
+    
+    .profile .profileOne>img {
+        
+    }
+    
+    .profile .profileOne .profileOneImg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+        z-index: -1;
+    }
+    .profile .profileOne .profileOneImg1 {
+        /* margin-left: 37%; */
+        margin:  50px auto ;
+        margin-bottom: 0px;
+        width: 400px;
+    }
+    
+    .profile .profileTwo {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .profile .profileTwo h2 {
+        font-size: 50px;
+        text-align: center;
+        /* margin-right: 37%; */
+        margin:  50px auto ;
+        /* margin-bottom: 100px; */
+        color: white;
+        text-shadow: 3px 3px 3px gray;
+    }
+    
+    .profile .profileTwo p {
+        font-size: 24px;
+        width: 60%;
+        /* margin-right: 37%;
+        margin-bottom: 100px; */
+        margin:  50px auto ;
+        text-align: center;
+        color: white;
+    }
+    
+    .profile .profileTwo img {
+        /* height: 100vh; */
+    }
+    
+    .profile .profileTwo .profileTwoImg1 {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width:100%;
+        z-index: -1;
+    }
+    .profile .profileTwo .profileTwoImg {
+        /* margin-right: 37%;
+        margin-bottom: -30px; */
+        margin:  30px auto ;
+        width: 400px;
+    }
+    
+    .profile .profileTwo .homebtn {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        transition: all 0.5s;
+
+        width: 150px;
+        height: auto;
+    }
+    
+    .profile .profileTwo .homebtn:hover {
+        transform: scale(0.8);
+    }
+    
+    .profile .profileMain {
+        position: relative;
+        display: flex;
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100vh;
+    }
+    
+    .profile .profileMain .profileTitle1 {
+        width: 100%;
+        height: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .profile .profileMain .profileTitle {
+        width: 250px;
+        height: auto;
+        margin-top: 100px;
+        margin-left: 0;
+    }
+    
+    .profile .profileMain .profile1 {
+        /* font-size: 60px; */
+        width: 100%;
+        height: 30%;
+         
+    }
+    
+    
+    .profile .profileMain .profile1 .profile1Img {
+        margin-top: 70px;
+        margin-left: 0;
+        width: 350px;
+    }
+    
+    .profile .profileMain .profile1 h2 {
+        font-size: 35px;
+        margin-left: 0;
+        color: #000;
+        margin: 25px auto;
+        text-align: center;
+    }   
+    
+    
+    .profile .profileMain .profile1 span {
+        font-size: 24px;
+        color: #808080;
+        text-align: center;
+        margin: 10px auto;
+        
+    }
+    
+    .profile .profileMain .profile1>P {
+        font-size: 24px;
+        /* margin-top: 20px;
+        margin-left: 0; */
+        text-align: center;
+        margin: 10px auto;
+        
+    }
+    
+    .profile .profileMain .profile2 {
+        margin: 0px 0px; 
+        color: #808080;
+        width: 100%;
+        height: 30%;
+    }
+    
+    .profile .profileMain .profile2 h2 {
+        font-size: 35px;
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    .profile .profileMain .profile2 h2:nth-child(1) {
+        font-size: 35px;
+        margin: 150px auto 10px auto;
+        text-align: center;
+    }
+    
+    .profile .profileMain .profile2 ul {
+        margin: 10px auto;
+        display: flex;
+        width: 80%;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .profile .profileMain .profile2 li {
+        font-size: 18px;
+        padding-top: 20px;
+        padding-left: 20px;
+        width: 170px;
+    }
+    
+    .profile .profileMain .profile2>p {
+        font-size: 20px;
+        /* margin-top: 20px;
+        margin-left: 20px; */
+        margin: 10px auto;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .profile .profileMain .profile3 {
+        margin-bottom: 0px;
+        margin-right : 0px; 
+        width: 100%;
+        height: 30%;
+    }
+    
+    .profile .profileMain .profile3 ul {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin-top: 150px;
+    }
+    
+    .profile .profileMain .profile3 li {
+        padding-right: 20px;
+    }
+    
+    .profile .profileMain .profile3 .profile3Img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .profile .profileMain .homebtn {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        transition: all 0.5s;
+        width: 100px;
+        height: auto;
+    }
+    
+    .profile .profileMain .homebtn:hover {
+        transform: scale(0.8);
+    } 
+
+    .profile .profileMain .designbtn1 {
+        position: absolute;
+        right: 20px;
+        top: 80px;
+        width: 100px;
+        transition: all 0.5s;
+    }
+    
+    .profile .profileMain .designbtn1:hover {
+        transform: scale(0.8);
+    } 
+
+    /* 디자인 */
+
+    .design .designMain {
+        background-color: #A6EFFF;
+    }
+
+
+    .design .designMain .designMainImg .resetbtn {
+        width: 400px;
+        height: 300px;
+        
+    }
+
+    
+    .div56 {
+        
+        position: absolute;
+        background-color: #A6EFFF;
+        width: 400px;
+        height: 300px;
+        right: 0%;
+        top: 0%;
+        z-index: 10;
+        opacity: 1;
+    }
+    .pngImg {
+        width: 150px;
+        height: auto;
+        position: absolute;
+        left: -25%;
+        bottom: 100%;
+        transform: rotate(40deg);
+    }
+
+    
+    .design .designMain2 {
+        background-color: #A6EFFF;
+        position: relative;
+        /* opacity: 0; */
+    }
+    
+    .design .designMain2>img {
+        position: absolute;
+        z-index: 1;
+    }
+    
+    .designMain2 .homebtn1 {
+        position: relative; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 400px;
+        height: 300px;
+        z-index: 0;
+        
+    
+    }
+    
+    .designMain2 .homebtn1>img {
+        position: absolute;  
+    }
+    
+    
+    .designMain2 .homebtn1 img:nth-child(1){
+        left: 0;
+        top: 5px;  
+        width:100%;
+        height: auto;
+    }
+    
+    
+    .designMain2 .homebtn1 img:nth-child(2){
+        left: 70px;
+        top: 60px;  
+        width: 250px;
+        height: auto;
+    }
+    
+    /* .design .designMain2 .homebtn1 {
+        left: 50%;
+        top: 50%;
+    } */
+    
+    .design .designMain2 .design1Btn {
+        left: 50px;
+        top: 50px;
+        width: 250px;
+        height: auto;
+    }
+    
+    .design .designMain2 .design2Btn {
+        left: 50px;
+        bottom: 50px;
+        width: 250px;
+        height: auto;
+    }
+    
+    .design .designMain2 .design3Btn {
+        right: 50px;
+        top: 50px;
+        width: 250px;
+        height: auto;
+    }
+    
+    .design .designMain2 .design4Btn {
+        right: 50px;
+        bottom: 50px;
+        width: 200px;
+        height: auto;
+    }
+
+
+/* 디자인123 */
+
+
+
+.allDesign .design1Bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+
+}
+
+.allDesign .design1Bg>img {
+
+    width: 70%;
+    height: 100vh;
+}
+
+.allDesign .designIn {
+    width: 60%;
+    height: auto;
+    z-index: 10;
+    margin: auto;
+}
+
+.allDesign .designTitle {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.allDesign .designTitle>img {
+    width: 250px;
+    height: auto;
+}
+
+
+
+.allDesign .designTitle .allBtn {
+    width: 100px;
+    height: auto;
+    transition: all 0.5s;
+}
+
+.allDesign .designTitle .allBtn:hover {
+    transform: scale(0.8);
+}
+.allDesign .designTitle .TitleBtn .allBtn1 {
+    width: 100px;
+    height: auto;
+    transition: all 0.5s;
+}
+
+.allDesign .designTitle .TitleBtn .allBtn1:hover {
+    transform: scale(0.8);
+}
+
+.allDesign .designIn .designTxt {
+    width:100%;
+    height: auto;
+    margin: auto;
+}
+
+.allDesign .designIn .designTxt>h2 {
+    font-size: 32px;
+    margin-top: 100px;
+}
+
+.allDesign .designIn .designTxt>p {
+    width: 80%;
+    height: 50px;
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+.allDesign .designIn .designTxt .designImg {
+    width: 100%;
+    height: 100%;
+    /* margin: 0px 10% 0px 10%; */
+    
+}
+
+.allDesign .designIn .designTxt .designImg>img {
+    width: auto;
+    height: 400px;
+    margin-left: -100px;
+}
+
+
+.allDesign .designIn .designButton {
+    width: 80%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.allDesign .designIn .designButton>button {
+
+    margin: 0px 20px ;
+
+    
+}
+
+
+/* 디자인4 */
+
+
+.design4 .design1Bg>img {
+    z-index: -1;
+    width: 60%;
+    height: 100vh;
+}
+
+
+.design4 .designTitle>img {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    width: 250px;
+}
+
+.design4 .slides {
+    position: relative;
+    overflow: hidden;
+    width: 450px;
+}
+
+.design4 .slider {
+    width: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.design4 .slide1 {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 0px;
+    width: 100%;
+}
+
+.design4 .slide1>img {
+    width: 100%;
+    height: auto;
+    margin-top: 100px;
+}
+
+.design4 .slide1>p {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 800px;
+}
+
+.design4 .lrBtn {
+    position: absolute; 
+    display: flex;
+    justify-content: space-between;
+    top: 50%;
+    left: 0;
+    width: 100%;
+}
+
+.design4 .lrBtn>p {
+
+    font-size: 32px;
+    color: #808080;
+}
+
+.design4 .lrBtn .left {
+    left: 0;
+}
+
+.design4 .lrBtn .right {
+    right: 0;
+}
+
+
+.design4 .design_homebtn4 {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+        transition: all 0.5s;
+        width: 120px;
+        height: auto;
+}
+
+.design4 .design_homebtn4:hover {
+    transform: scale(0.8);
+}
+
+.design4 .profilebtn4 {
+    position: absolute;
+    right:20px;
+    top: 120px;
+        transition: all 0.5s;
+        width: 120px;
+        height: auto;
+}
+
+.design4 .profilebtn4:hover {
+    transform: scale(0.8);
+}
+
+
+
+
+/* 버튼 */
+
+button {
+    font-size: 15px;
+    padding: 0.5em 1.5em;
+    border: transparent;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    background: dodgerblue;
+    color: white;
+    border-radius: 4px;
+   }
+
+   button>a {
+    color: white;
+    font-size: 15px;
+    
+   }
+   
+   button:hover {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(30,144,255,1) 0%, rgba(0,212,255,1) 100%);
+   }
+   
+   button:active {
+    transform: translate(0em, 0.2em);
+   }
+
+
+
+}
+
+
+
+/* 5번구간 480px이상 639px이하구간################ */
+@media(min-width:480px) and (max-width:639px){
+
+    .main1>img {
+        width: 400px;
+        height: auto;
+    }
+
+    .main .main2  {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .main .main2 .main2div {
+        width: 100%;
+        height: 90%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: -11;
+    }
+
+    .main .main2 .main2Img {
+        width: 400px;
+        height: auto;
+    }
+
+    .main .main2 .mainbg .profilebtn {
+        width: 120px; 
+        height: auto;
+        margin-right: 30px;
+        transition: all 0.5s;
+    }
+    
+    .main .main2 .mainbg1 .designbtn {
+        width: 120px; 
+        height: auto;
+        margin-left: 30px;
+        transition: all 0.5s;
+    }
+
+    .main .main2 .mainbg {
+        /* position: absolute;
+        left: 6%;
+        top: 31%; */
+        position: relative;
+        width: 200px;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 83%;
+    }
+    
+    .main .main2 .mainbg .btnbg {
+        position: absolute;
+        left: -10px;
+        top: 68px;
+        z-index: -10;
+        opacity: 0;
+    } 
+    
+    .main .main2 .mainbg1 {
+        position: relative;
+        width: 200px;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 83%;
+    
+        
+    }
+    
+    .main .main2 .mainbg1 .btnbg1 {
+        
+        position: absolute;
+        left: 25px;
+        top: 80px;
+        z-index: -10;
+        opacity: 0;
+        animation: ani1 2s linear infinite;
+        
+    }
+
+    .main .main2 .mainbg .btnbg {
+        width: 180px;
+        height: auto;
+    }
+    
+    .main .main2 .mainbg1 .btnbg1 {
+        width: 180px;
+        height: auto;
+    }
+
+
+
+
+    .profile .profileOne>h2 {
+        font-size: 50px;
+        text-align: center;
+        /* margin-left: 37%;  */
+        /* margin:  100px auto ; */
+        margin:  50px auto ;
+        /* margin-bottom: 100px;  */
+        color: white;
+        text-shadow: 3px 3px 3px gray;
+    }
+    
+    .profile .profileOne>p {
+        font-size: 24px;
+        width: 80%;
+        /* margin-left: 37%; */
+        margin:  50px auto ;
+        /* margin-bottom: 100px; */
+        text-align: center;
+        color: white;
+    }
+    
+    .profile .profileOne>img {
+        
+    }
+    
+    .profile .profileOne .profileOneImg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+        z-index: -1;
+    }
+    .profile .profileOne .profileOneImg1 {
+        /* margin-left: 37%; */
+        margin:  50px auto ;
+        margin-bottom: 0px;
+        width: 400px;
+    }
+    
+    .profile .profileTwo {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .profile .profileTwo h2 {
+        font-size: 50px;
+        text-align: center;
+        /* margin-right: 37%; */
+        margin:  50px auto ;
+        /* margin-bottom: 100px; */
+        color: white;
+        text-shadow: 3px 3px 3px gray;
+    }
+    
+    .profile .profileTwo p {
+        font-size: 24px;
+        width: 80%;
+        /* margin-right: 37%;
+        margin-bottom: 100px; */
+        margin:  50px auto ;
+        text-align: center;
+        color: white;
+    }
+    
+    .profile .profileTwo img {
+        /* height: 100vh; */
+    }
+    
+    .profile .profileTwo .profileTwoImg1 {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width:100%;
+        z-index: -1;
+    }
+    .profile .profileTwo .profileTwoImg {
+        /* margin-right: 37%;
+        margin-bottom: -30px; */
+        margin:  30px auto ;
+        width: 400px;
+    }
+    
+    .profile .profileTwo .homebtn {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        transition: all 0.5s;
+
+        width: 150px;
+        height: auto;
+    }
+    
+    .profile .profileTwo .homebtn:hover {
+        transform: scale(0.8);
+    }
+    
+    .profile .profileMain {
+        position: relative;
+        display: flex;
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100vh;
+    }
+    
+    .profile .profileMain .profileTitle1 {
+        width: 100%;
+        height: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .profile .profileMain .profileTitle {
+        width: 250px;
+        height: auto;
+        margin-top: 100px;
+        margin-left: 0;
+    }
+    
+    .profile .profileMain .profile1 {
+        /* font-size: 60px; */
+        width: 100%;
+        height: 30%;
+         
+    }
+    
+    
+    .profile .profileMain .profile1 .profile1Img {
+        margin-top: 70px;
+        margin-left: 0;
+        width: 350px;
+    }
+    
+    .profile .profileMain .profile1 h2 {
+        font-size: 35px;
+        margin-left: 0;
+        color: #000;
+        margin: 20px auto;
+        text-align: center;
+    }   
+    
+    
+    .profile .profileMain .profile1 span {
+        font-size: 24px;
+        color: #808080;
+        text-align: center;
+        margin: 10px auto;
+        
+    }
+    
+    .profile .profileMain .profile1>p {
+        font-size: 24px;
+        /* margin-top: 20px;
+        margin-left: 0; */
+        text-align: center;
+        margin: 10px auto;
+        font-weight: 800;
+    }
+    
+    .profile .profileMain .profile2 {
+        margin: 0px 0px; 
+        color: #808080;
+        width: 100%;
+        height: 30%;
+    }
+    
+    .profile .profileMain .profile2 h2 {
+        font-size: 35px;
+        margin: 15px auto;
+        text-align: center;
+    }
+
+    .profile .profileMain .profile2 h2:nth-child(1) {
+        font-size: 35px;
+        margin: 150px auto 10px auto;
+        text-align: center;
+    }
+    
+    .profile .profileMain .profile2 ul {
+        margin: 10px auto;
+        display: flex;
+        width: 90%;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+
+    }
+    
+    .profile .profileMain .profile2 li {
+        font-size: 16px;
+        padding-top: 20px;
+        padding-left: 25px;
+        
+    
+    }
+    
+    .profile .profileMain .profile2>p {
+        font-size: 20px;
+        /* margin-top: 20px;
+        margin-left: 20px; */
+        margin: 10px auto;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .profile .profileMain .profile3 {
+        margin-bottom: 0px;
+        margin-right : 0px; 
+        width: 100%;
+        height: 30%;
+    }
+    
+    .profile .profileMain .profile3 ul {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin-top: 150px;
+    }
+    
+    .profile .profileMain .profile3 li {
+        padding-right: 20px;
+    }
+    
+    .profile .profileMain .profile3 .profile3Img {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .profile .profileMain .homebtn {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        transition: all 0.5s;
+        width: 100px;
+        height: auto;
+    }
+    
+    .profile .profileMain .homebtn:hover {
+        transform: scale(0.8);
+    } 
+
+    .profile .profileMain .designbtn1 {
+        position: absolute;
+        right: 10px;
+        top: 80px;
+        width: 100px;
+        transition: all 0.5s;
+    }
+    
+    .profile .profileMain .designbtn1:hover {
+        transform: scale(0.8);
+    } 
+
+    /* 디자인 */
+
+    .design .designMain {
+        background-color: #A6EFFF;
+    }
+
+    .design .designMain .designMainImg .resetbtn {
+        width: 400px;
+        height: 300px;
+        
+    }
+
+    
+    .div56 {
+        
+        position: absolute;
+        background-color: #A6EFFF;
+        width: 400px;
+        height: 300px;
+        right: 0%;
+        top: 0%;
+        z-index: 10;
+        opacity: 1;
+    }
+    .pngImg {
+        width: 150px;
+        height: auto;
+        position: absolute;
+        left: -12%;
+        bottom: 110%;
+        transform: rotate(40deg);
+    }
+
+    
+    .design .designMain2 {
+        background-color: #A6EFFF;
+        position: relative;
+        /* opacity: 0; */
+    }
+    
+    .design .designMain2>img {
+        position: absolute;
+        z-index: 1;
+    }
+    
+    .designMain2 .homebtn1 {
+        position: relative; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 400px;
+        height: 300px;
+        z-index: 0;
+        margin-bottom: 60%;
+    }
+    
+    .designMain2 .homebtn1>img {
+        position: absolute;  
+    }
+    
+    
+    .designMain2 .homebtn1 img:nth-child(1){
+        left: 0;
+        top: 5px;  
+        width:100%;
+        height: auto;
+    }
+    
+    
+    .designMain2 .homebtn1 img:nth-child(2){
+        left: 70px;
+        top: 60px;  
+        width: 250px;
+        height: auto;
+    }
+    
+    /* .design .designMain2 .homebtn1 {
+        left: 50%;
+        top: 50%;
+    } */
+    
+    .design .designMain2 .design1Btn {
+        left: 30px;
+        top: 70%;
+        width: 200px;
+        height: auto;
+    }
+    
+    .design .designMain2 .design2Btn {
+        left: 30px;
+        bottom: 10%;
+        width: 200px;
+        height: auto;
+    }
+    
+    .design .designMain2 .design3Btn {
+        right: 30px;
+        top: 70%;
+        width: 200px;
+        height: auto;
+    }
+    
+    .design .designMain2 .design4Btn {
+        right: 30px;
+        bottom: 10%;
+        width: 150px;
+        height: auto;
+    }
+
+
+
+/* 디자인123 */
+
+
+
+.allDesign .design1Bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+
+}
+
+.allDesign .design1Bg>img {
+
+    width: 60%;
+    height: 100vh;
+}
+
+.allDesign .designIn {
+    width: 60%;
+    height: auto;
+    z-index: 10;
+    margin: auto;
+}
+
+.allDesign .designTitle {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.allDesign .designTitle>img {
+    width: 200px;
+    height: auto;
+}
+
+
+
+.allDesign .designTitle .allBtn {
+    width: 80px;
+    height: auto;
+    transition: all 0.5s;
+}
+
+.allDesign .designTitle .allBtn:hover {
+    transform: scale(0.8);
+}
+.allDesign .designTitle .TitleBtn .allBtn1 {
+    width: 80px;
+    height: auto;
+    transition: all 0.5s;
+}
+
+.allDesign .designTitle .TitleBtn .allBtn1:hover {
+    transform: scale(0.8);
+}
+
+.allDesign .designIn .designTxt {
+    width:100%;
+    height: auto;
+    margin: auto;
+}
+
+.allDesign .designIn .designTxt>h2 {
+    font-size: 28px;
+    margin-top: 100px;
+}
+
+.allDesign .designIn .designTxt>p {
+    width: 110%;
+    height: 50px;
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+.allDesign .designIn .designTxt .designImg {
+    width: 100%;
+    height: 100%;
+    /* margin: 0px 10% 0px 10%; */
+    
+}
+
+.allDesign .designIn .designTxt .designImg>img {
+    width: auto;
+    height: 350px;
+    margin-left: -80px;
+}
+
+
+.allDesign .designIn .designButton {
+    width: 100%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.allDesign .designIn .designButton>button {
+
+    margin: 0px 20px ;
+
+    
+}
+
+
+
+
+
+/* 디자인4 */
+
+/* .design4 .designTitle {
+    position: relative;
+
+} */
+
+
+.design4 .design1Bg>img {
+    z-index: -1;
+    width: 60%;
+    height: 100vh;
+}
+
+
+.design4 .designTitle>img {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    width: 200px;
+}
+
+.design4 .slides {
+    position: relative;
+    overflow: hidden;
+    width: 400px;
+}
+
+.design4 .slider {
+    width: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.design4 .slide1 {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 0px;
+    width: 100%;
+}
+
+.design4 .slide1>img {
+    width: 100%;
+    height: auto;
+    margin-top: 100px;
+}
+
+.design4 .slide1>p {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 800px;
+}
+
+.design4 .lrBtn {
+    position: absolute; 
+    display: flex;
+    justify-content: space-between;
+    top: 50%;
+    left: 0;
+    width: 100%;
+}
+
+.design4 .lrBtn>p {
+
+    font-size: 32px;
+    color: #808080;
+}
+
+.design4 .lrBtn .left {
+    left: 0;
+}
+
+.design4 .lrBtn .right {
+    right: 0;
+}
+
+
+.design4 .design_homebtn4 {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+        transition: all 0.5s;
+        width: 100px;
+        height: auto;
+}
+
+.design4 .design_homebtn4:hover {
+    transform: scale(0.8);
+}
+
+.design4 .profilebtn4 {
+    position: absolute;
+    right:20px;
+    top: 100px;
+        transition: all 0.5s;
+        width: 100px;
+        height: auto;
+}
+
+.design4 .profilebtn4:hover {
+    transform: scale(0.8);
+}
+
+
+
+
+
+/* 버튼 */
+
+button {
+    font-size: 14px;
+    padding: 0.5em 1.5em;
+    border: transparent;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    background: dodgerblue;
+    color: white;
+    border-radius: 4px;
+   }
+
+   button>a {
+    color: white;
+    font-size: 14px;
+    
+   }
+   
+   button:hover {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(30,144,255,1) 0%, rgba(0,212,255,1) 100%);
+   }
+   
+   button:active {
+    transform: translate(0em, 0.2em);
+   }
+
+
+
+
+}
+
+
+
+
+/* 6번구간 479px이하구간################ */
+@media(max-width:479px){
+
+    .main1>img {
+        width: 300px;
+        height: auto;
+    }
+
+    .main .main2  {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .main .main2 .main2div {
+        width: 100%;
+        height: 90%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: -11;
+    }
+
+    .main .main2 .main2Img {
+        width: 300px;
+        height: auto;
+    }
+
+    .main .main2 .mainbg .profilebtn {
+        width: 100px; 
+        height: auto;
+        margin-right: 0px;
+        transition: all 0.5s;
+    }
+    
+    .main .main2 .mainbg1 .designbtn {
+        width: 100px; 
+        height: auto;
+        margin-left: 0px;
+        transition: all 0.5s;
+    }
+
+    .main .main2 .mainbg {
+        /* position: absolute;
+        left: 6%;
+        top: 31%; */
+        position: relative;
+        width: 150px;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 85%;
+    }
+    
+    .main .main2 .mainbg .btnbg {
+        position: absolute;
+        left: -3px;
+        top: 30px;
+        z-index: -10;
+        opacity: 0;
+    } 
+    
+    .main .main2 .mainbg1 {
+        position: relative;
+        width: 150px;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 85%;
+    
+        
+    }
+    
+    .main .main2 .mainbg1 .btnbg1 {
+        
+        position: absolute;
+        left: 0px;
+        top: 45px;
+        z-index: -10;
+        opacity: 0;
+        animation: ani1 2s linear infinite;
+        
+    }
+
+    .main .main2 .mainbg .btnbg {
+        width: 150px;
+        height: auto;
+    }
+    
+    .main .main2 .mainbg1 .btnbg1 {
+        width: 150px;
+        height: auto;
+    }
+
+
+    .profile .profileOne>h2 {
+        font-size: 40px;
+        text-align: center;
+        /* margin-left: 37%;  */
+        /* margin:  100px auto ; */
+        margin:  30px auto ;
+        /* margin-bottom: 100px;  */
+        color: white;
+        text-shadow: 3px 3px 3px gray;
+    }
+    
+    .profile .profileOne>p {
+        font-size: 18px;
+        width: 80%;
+        /* margin-left: 37%; */
+        margin:  30px auto ;
+        /* margin-bottom: 100px; */
+        text-align: center;
+        color: white;
+    }
+    
+    .profile .profileOne>img {
+        
+    }
+    
+    .profile .profileOne .profileOneImg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+        z-index: -1;
+    }
+    .profile .profileOne .profileOneImg1 {
+        /* margin-left: 37%; */
+        margin:  30px auto ;
+        margin-bottom: 0px;
+        width: 300px;
+    }
+    
+    .profile .profileTwo {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .profile .profileTwo h2 {
+        font-size: 40px;
+        text-align: center;
+        /* margin-right: 37%; */
+        margin:  30px auto ;
+        /* margin-bottom: 100px; */
+        color: white;
+        text-shadow: 3px 3px 3px gray;
+    }
+    
+    .profile .profileTwo p {
+        font-size: 18px;
+        width: 80%;
+        /* margin-right: 37%;
+        margin-bottom: 100px; */
+        margin:  30px auto ;
+        text-align: center;
+        color: white;
+    }
+    
+    .profile .profileTwo img {
+        /* height: 100vh; */
+    }
+    
+    .profile .profileTwo .profileTwoImg1 {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width:100%;
+        z-index: -1;
+    }
+    .profile .profileTwo .profileTwoImg {
+        /* margin-right: 37%;
+        margin-bottom: -30px; */
+        margin:  30px auto ;
+        width: 300px;
+    }
+    
+    .profile .profileTwo .homebtn {
+        position: absolute;
+        left: 5px;
+        top: 5px;
+        transition: all 0.5s;
+
+        width: 80px;
+        height: auto;
+    }
+    
+    .profile .profileTwo .homebtn:hover {
+        transform: scale(0.8);
+    }
+    
+    .profile .profileMain {
+        position: relative;
+        display: flex;
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100vh;
+    }
+    
+    .profile .profileMain .profileTitle1 {
+        width: 100%;
+        height: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .profile .profileMain .profileTitle {
+        width: 180px;
+        height: auto;
+        margin-top: 100px;
+        margin-left: 0;
+    }
+    
+    .profile .profileMain .profile1 {
+        /* font-size: 60px; */
+        width: 100%;
+        height: 30%;
+         
+    }
+    
+    
+    .profile .profileMain .profile1 .profile1Img {
+        margin-top: 55px;
+        margin-left: 0;
+        width: 280px;
+    }
+    
+    .profile .profileMain .profile1 h2 {
+        font-size: 32px;
+        margin-left: 0;
+        color: #000;
+        margin: 0px auto;
+        text-align: center;
+    }   
+    
+    
+    .profile .profileMain .profile1 span {
+        font-size: 18px;
+        color: #808080;
+        text-align: center;
+        margin: 0px auto;
+        
+    }
+    
+    .profile .profileMain .profile1>p {
+        font-size: 18px;
+        /* margin-top: 20px;
+        margin-left: 0; */
+        text-align: center;
+        margin: 5px auto;
+        font-weight: 800;
+    }
+    
+    .profile .profileMain .profile2 {
+        margin: 0px 0px; 
+        color: #808080;
+        width: 100%;
+        height: 30%;
+    }
+    
+    .profile .profileMain .profile2 h2 {
+        font-size: 32px;
+        margin: 5px auto;
+        text-align: center;
+    }
+
+    .profile .profileMain .profile2 h2:nth-child(1) {
+        font-size: 32px;
+        margin: 120px auto 10px auto;
+        text-align: center;
+    }
+    
+    .profile .profileMain .profile2 ul {
+        margin: 0px auto;
+        display: flex;
+        width: 90%;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+
+    }
+    
+    .profile .profileMain .profile2 li {
+        font-size: 18px;
+        padding-top: 10px;
+        padding-left: 10px;
+        
+    
+    }
+    
+    .profile .profileMain .profile2>p {
+        font-size: 18px;
+        /* margin-top: 20px;
+        margin-left: 20px; */
+        margin: 0px auto;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .profile .profileMain .profile3 {
+        margin-bottom: 0px;
+        margin-right : 0px; 
+        width: 100%;
+        height: 30%;
+    }
+    
+    .profile .profileMain .profile3 ul {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin-top: 120px;
+    }
+    
+    .profile .profileMain .profile3 li {
+        padding-right: 10px;
+    }
+    
+    .profile .profileMain .profile3 .profile3Img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .profile .profileMain .homebtn {
+        position: absolute;
+        right: 5px;
+        top: 25px;
+        transition: all 0.5s;
+        width: 80px;
+        height: auto;
+    }
+    
+    .profile .profileMain .homebtn:hover {
+        transform: scale(0.8);
+    } 
+
+    .profile .profileMain .designbtn1 {
+        position: absolute;
+        right: 5px;
+        top: 75px;
+        width: 80px;
+        transition: all 0.5s;
+    }
+    
+    .profile .profileMain .designbtn1:hover {
+        transform: scale(0.8);
+    } 
+
+
+
+    /* 디자인 */
+
+    .design .designMain {
+        background-color: #A6EFFF;
+    }
+    
+    .design .designMain2 {
+        background-color: #A6EFFF;
+        position: relative;
+        /* opacity: 0; */
+    }
+    
+
+
+    .design .designMain .designMainImg .resetbtn {
+        width: 300px;
+        height: 250px;
+        
+    }
+
+    
+    .div56 {
+        
+        position: absolute;
+        background-color: #A6EFFF;
+        width: 300px;
+        height: 250px;
+        right: 0%;
+        top: 0%;
+        z-index: 10;
+        opacity: 1;
+    }
+    .pngImg {
+        width: 100px;
+        height: auto;
+        position: absolute;
+        left: -5%;
+        bottom: 106%;
+        transform: rotate(40deg);
+    }
+
+
+
+
+    .design .designMain2>img {
+        position: absolute;
+        z-index: 1;
+    }
+    
+    .designMain2 .homebtn1 {
+        position: relative; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        height: 250px;
+        z-index: 0;
+        margin-bottom: 60%;
+    }
+    
+    .designMain2 .homebtn1>img {
+        position: absolute;  
+    }
+    
+    
+    .designMain2 .homebtn1 img:nth-child(1){
+        left: 0;
+        top: 5px;  
+        width:100%;
+        height: auto;
+    }
+    
+    
+    .designMain2 .homebtn1 img:nth-child(2){
+        left: 55px;
+        top: 40px;  
+        width: 200px;
+        height: auto;
+    }
+    
+    /* .design .designMain2 .homebtn1 {
+        left: 50%;
+        top: 50%;
+    } */
+    
+    .design .designMain2 .design1Btn {
+        left: 15px;
+        top: 70%;
+        width: 120px;
+        height: auto;
+    }
+    
+    .design .designMain2 .design2Btn {
+        left: 15px;
+        bottom: 10%;
+        width: 120px;
+        height: auto;
+    }
+    
+    .design .designMain2 .design3Btn {
+        right: 15px;
+        top: 70%;
+        width: 120px;
+        height: auto;
+    }
+    
+    .design .designMain2 .design4Btn {
+        right: 15px;
+        bottom: 10%;
+        width: 120px;
+        height: auto;
+    }
+
+
+/* 디자인123 */
+
+
+
+.allDesign .design1Bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+
+}
+
+.allDesign .design1Bg>img {
+
+    width: 60%;
+    height: 100vh;
+    z-index: -10;
+}
+
+.allDesign .designIn {
+    width: 60%;
+    height: auto;
+    z-index: 10;
+    margin: auto;
+}
+
+.allDesign .designTitle {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+.allDesign .designTitle>img {
+    width: 170px;
+    height: auto;
+}
+
+.allDesign .designTitle .TitleBtn {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70px;
+    margin-top: 20px;
+}
+
+
+.allDesign .designTitle .allBtn {
+    width: 70px;
+    height: auto;
+    transition: all 0.5s;
+}
+
+.allDesign .designTitle .allBtn:hover {
+    transform: scale(0.8);
+}
+.allDesign .designTitle .TitleBtn .allBtn1 {
+    width: 70px;
+    height: auto;
+    transition: all 0.5s;
+}
+
+.allDesign .designTitle .TitleBtn .allBtn1:hover {
+    transform: scale(0.8);
+}
+
+.allDesign .designIn .designTxt {
+    width:100%;
+    height: auto;
+    margin: auto;
+}
+
+.allDesign .designIn .designTxt>h2 {
+    font-size: 28px;
+    margin-top: 100px;
+}
+
+.allDesign .designIn .designTxt>p {
+    width: 110%;
+    height: 50px;
+    margin: 30px 0;
+    font-size: 16px;
+}
+
+.allDesign .designIn .designTxt .designImg {
+    width: 100%;
+    height: 100%;
+    /* margin: 0px 10% 0px 10%; */
+    
+}
+
+.allDesign .designIn .designTxt .designImg>img {
+    width: auto;
+    height: 250px;
+    margin-left: -70px;
+}
+
+
+.allDesign .designIn .designButton {
+    width: 120%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.allDesign .designIn .designButton>button {
+
+    margin: 0px 20px ;
+
+    
+}
+
+
+/* 디자인4 */
+
+/* .design4 .designTitle {
+    position: relative;
+
+} */
+
+
+
+.design4 .design1Bg>img {
+    z-index: -1;
+    width: 60%;
+    height: 100vh;
+}
+
+.design4 .designTitle>img {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    width: 150px;
+}
+
+.design4 .slides {
+    position: relative;
+    overflow: hidden;
+    width: 250px;
+}
+
+.design4 .slider {
+    width: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.design4 .slide1 {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 0px;
+    width: 100%;
+}
+
+.design4 .slide1>img {
+    width: 100%;
+    height: auto;
+    margin-top: 100px;
+}
+
+.design4 .slide1>p {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 800px;
+}
+
+.design4 .lrBtn {
+    position: absolute; 
+    display: flex;
+    justify-content: space-between;
+    top: 50%;
+    left: 0;
+    width: 100%;
+}
+
+.design4 .lrBtn>p {
+
+    font-size: 32px;
+    color: #808080;
+}
+
+.design4 .lrBtn .left {
+    left: 0;
+}
+
+.design4 .lrBtn .right {
+    right: 0;
+}
+
+
+.design4 .design_homebtn4 {
+    position: absolute;
+    right: 20px;
+    top: 30px;
+        transition: all 0.5s;
+        width: 80px;
+        height: auto;
+}
+
+.design4 .design_homebtn4:hover {
+    transform: scale(0.8);
+}
+
+.design4 .profilebtn4 {
+    position: absolute;
+    right:20px;
+    top: 100px;
+        transition: all 0.5s;
+        width: 80px;
+        height: auto;
+}
+
+.design4 .profilebtn4:hover {
+    transform: scale(0.8);
+}
+
+
+/* 버튼 */
+
+button {
+    font-size: 14px;
+    padding: 0.5em 0.5em;
+    border: transparent;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    background: dodgerblue;
+    color: white;
+    border-radius: 4px;
+   }
+
+   button>a {
+    color: white;
+    font-size: 14px;
+    
+   }
+   
+   button:hover {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(30,144,255,1) 0%, rgba(0,212,255,1) 100%);
+   }
+   
+   button:active {
+    transform: translate(0em, 0.2em);
+   }
+
+
+}

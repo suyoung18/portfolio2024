@@ -1,6 +1,8 @@
 /* 언어설정 */
 @charset 'UTF-8';
 
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap');
+
 @font-face {
     font-family: 'Danjo-bold-Regular';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Danjo-bold-Regular.woff2') format('woff2');
@@ -1450,4 +1452,5 @@ position: relative;
 .sub1_5>div {
     /* font-family: 'Gowun Batang', serif;
     font-family: 'Nanum Myeongjo', serif; */
+    font-family: 'IBM Plex Sans KR', sans-serif;
 }

@@ -135,14 +135,14 @@ $('.btn').children('li').click(function(){
     // btnStart.onclick = function () {
     //     // 기존에 있던 setInterval 없애고
     //     clearInterval(interval);
-      
+    
     //     interval = setInterval(startTimer, 10);
     //   };
-      
+    
     //   btnStop.onclick = function () {
     //     clearInterval(interval);
     //   };
-      
+    
 
 
     $('.btn1 div').eq(0).click(function(){
@@ -318,29 +318,56 @@ $('.box7 .img li').eq(1).click(function(){
   });
 
 
-var bb=0;
+// var bb=0;
 
-$('.left ').click(function(){
+// $('.left ').click(function(){
 
-    bb++
-    $('.listBox4').css({'left':-414*bb})
-    $('.listBox4 li').removeClass('on');
-    // console.log(bb)
-    $('.listBox4 li').eq(bb+1).addClass('on')
-    $('.listBox4 li').eq(bb).clone().appendTo('.listBox4')
-})
+//     bb++
+//     $('.listBox4').css({'left': 414*bb})
+//     $('.listBox4 li').removeClass('on');
+//     // console.log(bb)
+//     $('.listBox4 li').eq(bb+1).addClass('on')
+//     $('.listBox4 li').eq(bb).clone().appendTo('.listBox4')
+// })
 
 
 
-$('.right ').click(function(){
+// $('.right ').click(function(){
 
-    bb++
-    $('.listBox4').css({'left':-414*bb})
-    // $('.listBox4 li').removeClass('on');
-    // console.log(bb)
-    // $('.listBox4 li').eq(bb+1).addClass('on')
-      $('.listBox4 li').eq(bb).clone().appendTo('.listBox4')
-})
+//     bb++
+//     $('.listBox4').css({'left': -414*bb})
+//     // $('.listBox4 li').removeClass('on');
+//     // console.log(bb)
+//     // $('.listBox4 li').eq(bb+1).addClass('on')
+//       $('.listBox4 li').eq(bb).clone().appendTo('.listBox4')
+//       $('.listBox4 li').eq(bb+1).addClass('on')
+// })
+
+
+
+
+const slides = document.querySelector('.listBox4');
+const prevBtn = document.querySelector('.left');
+const nextBtn = document.querySelector('.right');
+
+let currentIndex = 0;
+
+prevBtn.addEventListener('click', function() {
+  currentIndex = (currentIndex - 1 + 6) % 6;
+  updateSlider();
+});
+
+nextBtn.addEventListener('click', function() {
+  currentIndex = (currentIndex + 1) % 6;
+  updateSlider();
+});
+
+function updateSlider() {
+  const slideWidthPercentage = 100 / slides.children.length;
+  slides.style.transform = `translateX(${-currentIndex * slideWidthPercentage}%)`;
+}
+
+
 
 
 // $('.right').click(function(){
