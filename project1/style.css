@@ -1,6 +1,10 @@
 /* 언어설정 */
 @charset 'UTF-8';
 
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap');
+
+
+
 /* reset */
 * {margin: 0;
     padding: 0;}
@@ -15,9 +19,14 @@ img {border: none;
         
     }
 
+    .box9 {
+        margin-bottom: 0px;
+    }
+
     body {
         margin: auto;
         width: 80%;
+        font-family: 'IBM Plex Sans KR', sans-serif;
     }
 
     /* 박스1 */
@@ -97,7 +106,12 @@ img {border: none;
 .box1-1 .util .submenu li {
     padding: 20px;
     border-bottom: 1px solid #000;
+    cursor: pointer;
 
+}
+
+.box1-1 .util .submenu li:hover {
+    font-weight: 800;
 }
 .box1-1 .util .submenu li:nth-child(6) {
     
@@ -292,7 +306,7 @@ display: none;
     width: 254px;
     height: 42px;
     margin-top: 24px;
-    background-color: #C5C5C5;
+    background-color: #888;
     margin-right: 8px;
     border-radius: 5px 5px 0 0; 
     text-align: center;
@@ -300,7 +314,7 @@ display: none;
 }
 
 .titleBox li.on {color: #000;
-    background-color: #888;}
+    background-color: #C5C5C5;}
 .titleBox li:hover {text-decoration: underline;}
 
 .box3-2 {
@@ -634,7 +648,7 @@ height: 100%;
     padding: 10px 20px ;
     font-weight: bold;
     font-size: 18px;
-    margin: 0 325px;
+    margin: 0 45%;
 }
 
 .fixed article ul {
@@ -658,7 +672,7 @@ height: 100%;
     background-image: url(img/img1.jpg);
     background-position: center;
     background-size: cover;
-    right: 330px;
+    right: 8%;
     top: 15px;
     position: absolute; 
 }
@@ -895,7 +909,7 @@ z-index: 10;
 
 .box7 .title {
     width: 100%;
-    height: 76px;
+    height: 10%;
     background-color: #4460F6;
     display: flex;
     justify-content: space-between;
@@ -931,6 +945,12 @@ z-index: 10;
     margin-top: 3px;
     text-align: center;
 
+}
+
+.box7 .wee {
+    position: relative;
+    width: 100%;
+    height: 90%;
 }
 
 .box7 .wee .img {
@@ -975,30 +995,30 @@ z-index: 10;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    width: 450px;
-    height: 715px;
+    width: 30%;
+    height: 75vh;
     border: 1px solid #fff;
     position: absolute;
-    left: 100px;
-    top: 5px;
+    left: 5%;
+    top: 10%;
 
 }
 
-.wee {
+/* .wee {
     position: relative;
-}
+} */
 
 .wee .img li:nth-child(2) {
     background-image: url(img/g2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    width: 360px;
-    height: 350px;
+    width: 25%;
+    height: 35vh;
     border: 1px solid #fff;
     position: absolute;
-    right: 520px; 
-    top: 5px;
+    right: 35%; 
+    top: 10%;
 }
 
 .wee .img li:nth-child(3) {
@@ -1006,12 +1026,12 @@ z-index: 10;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    width: 360px;
-    height: 350px;
+    width: 25%;
+    height: 35vh;
     border: 1px solid #fff;
     position: absolute;
-    right: 100px;
-    top: 5px;
+    right: 5%;
+    top: 10%;
 }
 
 .wee .img li:nth-child(4) {
@@ -1019,12 +1039,12 @@ z-index: 10;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    width: 780px;
-    height: 350px;
+    width: 50%;
+    height: 35vh;
     border: 1px solid #fff;
     position: absolute;
-    top: 370px;
-    right: 100px;
+    bottom: 60%;
+    right: 5%;
 }
 
 
@@ -1068,7 +1088,7 @@ z-index: 10;
 }
 
 .box8 .txtBox {
-    width: 600px;
+    width: 40%;
     height: 450px;
     border-radius: 10px;
     background-color: #9DA8E4;
@@ -1080,7 +1100,7 @@ z-index: 10;
 }
 
 .big .txt1 {
-    width: 580px;
+    width: 96%;
     height: 380px;
     background-color: #576FEB;
     border-radius: 10px;
@@ -1114,8 +1134,8 @@ z-index: 10;
 
 .box8 .txt  {
     
-    width: 560px;
-    height: 316px;
+    width: 96%;
+    height: 310px;
     background-color: #3147BD;
     border-radius: 10px;
     margin-left: 10px;
@@ -1215,7 +1235,7 @@ z-index: 10;
 
 .box9 {
     width: 100%;
-    height: 450px;
+    height: 470px;
     background-color: #424242;
 }
 
@@ -1404,6 +1424,1254 @@ z-index: 10;
 
 
 /* 미디어쿼리 */
+
+
+
+
+/* 1번구간 1280픽셀 이상 15999픽셀 이하 구간##################################################### */
+@media(min-width:1280px) and (max-width:1599px){
+
+
+    .box1-1 .util .submenu {
+        width: 250px;
+        height: 465px;
+        font-size: 24px;
+    }
+
+    .box1-1 .util .submenu ul {
+        margin: 5px 10px;
+        
+    }
+
+    .slide strong {
+        font-size: 45px;
+    }
+    .slide p {
+        font-size: 20px;
+    }
+
+    .box3-2 .listBox ul {
+        padding-left: 30px;
+        padding-right: 30px;
+        
+    }
+    
+
+    
+    .box3-2 .listBox p {
+        
+        margin-top: 30px;
+        padding-bottom: 20px;
+    }
+
+    .bww li {
+        padding-bottom: 10px;
+
+        padding-top: 10px;
+    }
+    
+    .box3-2 .listBox p:nth-child(1) {
+        font-size: 18px;
+        
+    }   
+    
+    .box3-2 .listBox p:nth-child(2) {
+        font-size: 18px;
+    
+    }
+    
+    .box3-2 .listBox p:nth-child(3) {
+        font-size: 16px;
+    
+    }
+
+    .txtBoxs {
+        width: 50%;
+        height: 600px;
+        background-color: #9DA8E4;
+    }
+    
+
+    
+
+    
+
+    
+    .txtBoxs .mop1 li {
+
+        font-size: 16px;
+    }
+    
+
+    
+    
+    .txtBoxs .toTep {
+            
+        width:95%;
+        height: 416px;
+        background-color: #3147BD;
+        border-radius: 10px;
+        margin: auto;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+    
+    }
+    
+    /* .toto {
+        margin: 0px 0px;
+        display: flex;
+        width: 100%;
+    } */
+    .toTep .toto {
+        margin: 0px 40px;
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    
+    
+    .tep1 {
+        margin: 20px 20px;
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    
+
+    
+
+
+    .toto form {
+        display: flex;
+        /* width: 100%;
+       height: 100px; */
+        flex-wrap: nowrap;
+       
+    }
+     
+    
+    .txtBoxs form input {
+        width: 130px;
+    }
+    
+    /* .txtBoxs form input:focus {outline: none;} */
+    
+    
+    .txtBoxs form>div {
+        padding: 10px 10px;
+    }
+    
+    .txtBoxs .name {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+       
+    }   
+    
+    
+    
+    .txtBoxs .people {    
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        margin-right: 0%;
+        margin-top: 0px;
+        
+    }
+    
+    
+    
+    #datepicker {
+        margin: 0px 40px;
+        width: 100%;
+    }
+    
+    .box4 .title h2{
+        color: #fff;
+        font-size: 40px;
+        font-weight: bold;
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+
+    .box6-1 p:nth-child(1)  {
+        font-size: 50px;
+
+    }
+    
+    .box6-1 p:nth-child(2)  {
+        font-size: 28px;
+
+    }
+    
+    .box6-1 p:nth-child(3)  {
+        font-size: 22px;
+
+    }
+    
+    .box6-1 p:nth-child(3) i {
+        font-size: 32px;
+    }
+
+    .wee .img li:nth-child(1) {
+        background-image: url(img/g1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        width: 350px;
+        height: 615px;
+        border: 1px solid #fff;
+        position: absolute;
+        left: 50px;
+        top: 50px;
+    
+    }
+    
+    .wee {
+        position: relative;
+    }
+    
+    .wee .img li:nth-child(2) {
+        background-image: url(img/g2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        width: 260px;
+        height: 250px;
+        border: 1px solid #fff;
+        position: absolute;
+        right:330px; 
+        top: 50px;
+    }
+    
+    .wee .img li:nth-child(3) {
+        background-image: url(img/g3.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        width: 260px;
+        height: 250px;
+        border: 1px solid #fff;
+        position: absolute;
+        right: 50px;
+        top: 50px;
+    }
+    
+    .wee .img li:nth-child(4) {
+        background-image: url(img/g4.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        width: 540px;
+        height: 350px;
+        border: 1px solid #fff;
+        position: absolute;
+        top: 315px;
+        right: 50px;
+    }
+
+
+    .box8 .big .txtBox {
+        margin-left: 50px;
+    }
+    
+
+    .box8 .map iframe{
+        width: 450px;
+        height: 450px;
+        border-radius: 10px;
+    }
+
+    .box8 .txtBox {
+        width: 45%;
+        height: 450px;
+        border-radius: 10px;
+        background-color: #9DA8E4;
+    } 
+
+    .box8 .big1 h2 {
+        font-size: 32px;
+        color: #fff;
+        padding-top: 20px;
+        padding-left: 10%;
+        
+    }
+
+    .fixed1 article p {
+        font-size: 10px;
+
+    }
+    
+
+
+    .fixed {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: none;
+        z-index: 100;
+    
+    }
+    .fixed.on {
+        display: flex;
+    }
+    
+    .fixed article {
+        width: 80%;
+        height: 70vh;
+        background-color: #fff;
+        position: relative;
+        border-radius: 10px;
+        padding: 30px;
+        
+    
+    }
+    
+    
+    .fixed article p {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        border: 2px solid #000;
+    
+        font-size: 30px;
+        text-align: center;
+        line-height: 1.1;
+        background-color: #ccc;
+        cursor: pointer;
+    }
+    
+    .fixed article p:hover {
+        background-color: #fff;
+    } 
+    
+    .fixed .logo22 {
+        background-image: url(img/toplogo.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute; 
+        left: 50px;
+        top: 10px;
+        width: 200px;
+        height: 200px;
+        z-index: 120;
+    }
+    
+    .fixed article h2 {
+        width: 57.7%;
+        margin: 0 auto;
+    }
+    
+    .fixed article button {
+        padding: 10px 20px ;
+        font-weight: bold;
+        font-size: 18px;
+        margin: 0 45%;
+    }
+    
+    .fixed article ul {
+        width: 60%;
+        margin: 0 auto;
+        list-style: none;
+        font-size: 18px ;
+    }
+    
+    .fixed article .menu3 {
+        color: #000;
+    }
+    
+    .fixed article li {
+        padding: 20px;
+    }
+    
+    .fixed article .img21 {
+        width: 400px;
+        height: 300px;
+        background-image: url(img/img1.jpg);
+        background-position: center;
+        background-size: cover;
+        right: 8%;
+        top: 15px;
+        position: absolute; 
+    }
+    
+    .fixed article .brtxt {
+        margin-top: 20px;
+        background-color: #45a049;
+        color: #fff;
+    }
+
+
+
+}
+
+
+/* 2번구간 1024px이상 1279px이하구간################ */
+@media(min-width:1024px) and (max-width:1279px){
+
+    body {
+        margin: auto;
+        width: 100%;
+        font-family: 'IBM Plex Sans KR', sans-serif;
+    }
+
+    .box1-1 .util .submenu {
+        width: 250px;
+        height: 465px;
+        font-size: 24px;
+    }
+
+    .box1-1 .util .submenu ul {
+        margin: 5px 10px;
+        
+    }
+
+    .box1-2 a {
+        font-size: 18px;
+        padding-left: 10px;
+        padding-right: 10px;
+    
+    }
+    
+
+    .slide strong {
+        font-size: 45px;
+    }
+    .slide p {
+        font-size: 20px;
+    }
+
+    .box3-2 .listBox ul {
+        padding-left: 30px;
+        padding-right: 30px;
+        
+    }
+    
+
+    
+    .box3-2 .listBox p {
+        
+        margin-top: 30px;
+        padding-bottom: 20px;
+    }
+
+    .bww li {
+        padding-bottom: 10px;
+
+        padding-top: 10px;
+    }
+    
+    .box3-2 .listBox p:nth-child(1) {
+        font-size: 18px;
+        
+    }   
+    
+    .box3-2 .listBox p:nth-child(2) {
+        font-size: 18px;
+    
+    }
+    
+    .box3-2 .listBox p:nth-child(3) {
+        font-size: 16px;
+    
+    }
+
+    .txtBoxs {
+        width: 50%;
+        height: 600px;
+        background-color: #9DA8E4;
+    }
+    
+
+    
+
+    
+
+    
+    .txtBoxs .mop1 li {
+
+        font-size: 16px;
+    }
+    
+
+    
+    
+    .txtBoxs .toTep {
+            
+        width:95%;
+        height: 416px;
+        background-color: #3147BD;
+        border-radius: 10px;
+        margin: auto;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+    
+    }
+    
+    /* .toto {
+        margin: 0px 0px;
+        display: flex;
+        width: 100%;
+    } */
+    .toTep .toto {
+        margin: 0px 40px;
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    
+    
+    .tep1 {
+        margin: 20px 20px;
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    
+
+    
+
+
+    .toto form {
+        display: flex;
+        /* width: 100%;
+       height: 100px; */
+        flex-wrap: nowrap;
+       
+    }
+     
+    
+    .txtBoxs form input {
+        width: 130px;
+    }
+    
+    /* .txtBoxs form input:focus {outline: none;} */
+    
+    
+    .txtBoxs form>div {
+        padding: 10px 10px;
+    }
+    
+    .txtBoxs .name {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+       
+    }   
+    
+    
+    
+    .txtBoxs .people {    
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        margin-right: 0%;
+        margin-top: 0px;
+        
+    }
+    
+    
+    
+    #datepicker {
+        margin: 0px 40px;
+        width: 100%;
+    }
+    
+    .box4 .title h2{
+        color: #fff;
+        font-size: 40px;
+        font-weight: bold;
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+
+    .box6-1 p:nth-child(1)  {
+        font-size: 50px;
+
+    }
+    
+    .box6-1 p:nth-child(2)  {
+        font-size: 28px;
+
+    }
+    
+    .box6-1 p:nth-child(3)  {
+        font-size: 22px;
+
+    }
+    
+    .box6-1 p:nth-child(3) i {
+        font-size: 32px;
+    }
+
+    .wee .img li:nth-child(1) {
+        background-image: url(img/g1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        width: 350px;
+        height: 615px;
+        border: 1px solid #fff;
+        position: absolute;
+        left: 50px;
+        top: 50px;
+    
+    }
+    
+    .wee {
+        position: relative;
+    }
+    
+    .wee .img li:nth-child(2) {
+        background-image: url(img/g2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        width: 260px;
+        height: 250px;
+        border: 1px solid #fff;
+        position: absolute;
+        right:330px; 
+        top: 50px;
+    }
+    
+    .wee .img li:nth-child(3) {
+        background-image: url(img/g3.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        width: 260px;
+        height: 250px;
+        border: 1px solid #fff;
+        position: absolute;
+        right: 50px;
+        top: 50px;
+    }
+    
+    .wee .img li:nth-child(4) {
+        background-image: url(img/g4.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        width: 540px;
+        height: 350px;
+        border: 1px solid #fff;
+        position: absolute;
+        top: 315px;
+        right: 50px;
+    }
+
+
+    .box8 .big .txtBox {
+        margin-left: 50px;
+    }
+    
+
+    .box8 .map iframe{
+        width: 450px;
+        height: 450px;
+        border-radius: 10px;
+    }
+
+    .box8 .txtBox {
+        width: 45%;
+        height: 450px;
+        border-radius: 10px;
+        background-color: #9DA8E4;
+    } 
+
+    .box8 .big1 h2 {
+        font-size: 32px;
+        color: #fff;
+        padding-top: 20px;
+        padding-left: 10%;
+        
+    }
+
+
+
+
+
+}
+
+
+
+/* 3번구간 780px이상 1023px이하구간################ */
+@media(min-width:780px) and (max-width:1023px){
+
+    body {
+        margin: auto;
+        width: 100%;
+        font-family: 'IBM Plex Sans KR', sans-serif;
+    }
+
+    .box1-1 .util .submenu {
+        width: 250px;
+        height: 465px;
+        font-size: 24px;
+    }
+
+    .box1-1 .util .submenu ul {
+        margin: 5px 10px;
+        
+    }
+
+    .slide strong {
+        font-size: 45px;
+    }
+    .slide p {
+        font-size: 20px;
+    }
+
+    .box3-2 .listBox ul {
+        padding-left: 30px;
+        padding-right: 30px;
+        
+    }
+    
+
+    
+    .box3-2 .listBox p {
+        
+        margin-top: 30px;
+        padding-bottom: 20px;
+    }
+
+    .bww li {
+        padding-bottom: 10px;
+
+        padding-top: 10px;
+    }
+    
+    .box3-2 .listBox p:nth-child(1) {
+        font-size: 18px;
+        
+    }   
+    
+    .box3-2 .listBox p:nth-child(2) {
+        font-size: 18px;
+    
+    }
+    
+    .box3-2 .listBox p:nth-child(3) {
+        font-size: 16px;
+    
+    }
+
+    .txtBoxs {
+        width: 50%;
+        height: 600px;
+        background-color: #9DA8E4;
+    }
+    
+
+    
+
+    
+
+    
+    .txtBoxs .mop1 li {
+
+        font-size: 16px;
+    }
+    
+
+    
+    
+    .txtBoxs .toTep {
+            
+        width:95%;
+        height: 416px;
+        background-color: #3147BD;
+        border-radius: 10px;
+        margin: auto;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+    
+    }
+    
+    /* .toto {
+        margin: 0px 0px;
+        display: flex;
+        width: 100%;
+    } */
+    .toTep .toto {
+        margin: 0px 40px;
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    
+    
+    .tep1 {
+        margin: 20px 20px;
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    
+
+    
+
+
+    .toto form {
+        display: flex;
+        /* width: 100%;
+       height: 100px; */
+        flex-wrap: nowrap;
+       
+    }
+     
+    
+    .txtBoxs form input {
+        width: 130px;
+    }
+    
+    /* .txtBoxs form input:focus {outline: none;} */
+    
+    
+    .txtBoxs form>div {
+        padding: 10px 10px;
+    }
+    
+    .txtBoxs .name {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+       
+    }   
+    
+    
+    
+    .txtBoxs .people {    
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        margin-right: 0%;
+        margin-top: 0px;
+        
+    }
+    
+    
+    
+    #datepicker {
+        margin: 0px 40px;
+        width: 100%;
+    }
+    
+    .box4 .title h2{
+        color: #fff;
+        font-size: 40px;
+        font-weight: bold;
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+
+    .box6-1 p:nth-child(1)  {
+        font-size: 50px;
+
+    }
+    
+    .box6-1 p:nth-child(2)  {
+        font-size: 28px;
+
+    }
+    
+    .box6-1 p:nth-child(3)  {
+        font-size: 22px;
+
+    }
+    
+    .box6-1 p:nth-child(3) i {
+        font-size: 32px;
+    }
+
+    .wee .img li:nth-child(1) {
+        background-image: url(img/g1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        width: 350px;
+        height: 615px;
+        border: 1px solid #fff;
+        position: absolute;
+        left: 50px;
+        top: 50px;
+    
+    }
+    
+    .wee {
+        position: relative;
+    }
+    
+    .wee .img li:nth-child(2) {
+        background-image: url(img/g2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        width: 260px;
+        height: 250px;
+        border: 1px solid #fff;
+        position: absolute;
+        right:330px; 
+        top: 50px;
+    }
+    
+    .wee .img li:nth-child(3) {
+        background-image: url(img/g3.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        width: 260px;
+        height: 250px;
+        border: 1px solid #fff;
+        position: absolute;
+        right: 50px;
+        top: 50px;
+    }
+    
+    .wee .img li:nth-child(4) {
+        background-image: url(img/g4.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        width: 540px;
+        height: 350px;
+        border: 1px solid #fff;
+        position: absolute;
+        top: 315px;
+        right: 50px;
+    }
+
+
+    .box8 .big .txtBox {
+        margin-left: 50px;
+    }
+    
+
+    .box8 .map iframe{
+        width: 450px;
+        height: 450px;
+        border-radius: 10px;
+    }
+
+    .box8 .txtBox {
+        width: 45%;
+        height: 450px;
+        border-radius: 10px;
+        background-color: #9DA8E4;
+    } 
+
+    .box8 .big1 h2 {
+        font-size: 32px;
+        color: #fff;
+        padding-top: 20px;
+        padding-left: 10%;
+        
+    }
+
+
+}
+
+
+
+@media(min-width:640px) and (max-width:779px){
+
+    body {
+        margin: auto;
+        width: 100%;
+        font-family: 'IBM Plex Sans KR', sans-serif;
+    }
+
+    .box1-1 .util .submenu {
+        width: 250px;
+        height: 465px;
+        font-size: 24px;
+    }
+
+    .box1-1 .util .submenu ul {
+        margin: 5px 10px;
+        
+    }
+
+    .box1-2 a {
+        font-size: 18px;
+        padding-left: 20px;
+        padding-right: 20px;
+    
+    }
+
+    .slide strong {
+        font-size: 45px;
+    }
+    .slide p {
+        font-size: 20px;
+    }
+
+    .box3-2 .listBox ul {
+        padding-left: 10px;
+        padding-right: 10px;
+        
+    }
+    
+
+    
+    .box3-2 .listBox p {
+        
+        margin-top: 30px;
+        padding-bottom: 20px;
+    }
+
+    .bww li {
+        padding-bottom: 10px;
+
+        padding-top: 10px;
+    }
+    
+    .box3-2 .listBox p:nth-child(1) {
+        font-size: 18px;
+        
+    }   
+    
+    .box3-2 .listBox p:nth-child(2) {
+        font-size: 18px;
+    
+    }
+    
+    .box3-2 .listBox p:nth-child(3) {
+        font-size: 16px;
+    
+    }
+
+    .txtBoxs {
+        width: 50%;
+        height: 600px;
+        background-color: #9DA8E4;
+    }
+    
+
+    
+
+    
+
+    
+    .txtBoxs .mop1 li {
+
+        font-size: 16px;
+    }
+    
+
+    
+    
+    .txtBoxs .toTep {
+            
+        width:95%;
+        height: 416px;
+        background-color: #3147BD;
+        border-radius: 10px;
+        margin: auto;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+    
+    }
+    
+    /* .toto {
+        margin: 0px 0px;
+        display: flex;
+        width: 100%;
+    } */
+    .toTep .toto {
+        margin: 0px 40px;
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    
+    
+    .tep1 {
+        margin: 20px 20px;
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    
+
+    
+
+
+    .toto form {
+        display: flex;
+        /* width: 100%;
+       height: 100px; */
+        flex-wrap: nowrap;
+       
+    }
+     
+    
+    .txtBoxs form input {
+        width: 130px;
+    }
+    
+    /* .txtBoxs form input:focus {outline: none;} */
+    
+    
+    .txtBoxs form>div {
+        padding: 10px 10px;
+    }
+    
+    .txtBoxs .name {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+       
+    }   
+    
+    
+    
+    .txtBoxs .people {    
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        margin-right: 0%;
+        margin-top: 0px;
+        
+    }
+    
+    
+    
+    #datepicker {
+        margin: 0px 40px;
+        width: 100%;
+    }
+    
+    .box4 .title h2{
+        color: #fff;
+        font-size: 40px;
+        font-weight: bold;
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+
+    .box6-1 p:nth-child(1)  {
+        font-size: 50px;
+
+    }
+    
+    .box6-1 p:nth-child(2)  {
+        font-size: 28px;
+
+    }
+    
+    .box6-1 p:nth-child(3)  {
+        font-size: 22px;
+
+    }
+    
+    .box6-1 p:nth-child(3) i {
+        font-size: 32px;
+    }
+
+    .wee .img li:nth-child(1) {
+        background-image: url(img/g1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        width: 350px;
+        height: 615px;
+        border: 1px solid #fff;
+        position: absolute;
+        left: 50px;
+        top: 50px;
+    
+    }
+    
+    .wee {
+        position: relative;
+    }
+    
+    .wee .img li:nth-child(2) {
+        background-image: url(img/g2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        width: 260px;
+        height: 250px;
+        border: 1px solid #fff;
+        position: absolute;
+        right:330px; 
+        top: 50px;
+    }
+    
+    .wee .img li:nth-child(3) {
+        background-image: url(img/g3.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        width: 260px;
+        height: 250px;
+        border: 1px solid #fff;
+        position: absolute;
+        right: 50px;
+        top: 50px;
+    }
+    
+    .wee .img li:nth-child(4) {
+        background-image: url(img/g4.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        width: 540px;
+        height: 350px;
+        border: 1px solid #fff;
+        position: absolute;
+        top: 315px;
+        right: 50px;
+    }
+
+
+    .box8 .big .txtBox {
+        margin-left: 50px;
+    }
+    
+
+    .box8 .map iframe{
+        width: 450px;
+        height: 450px;
+        border-radius: 10px;
+    }
+
+    .box8 .txtBox {
+        width: 45%;
+        height: 450px;
+        border-radius: 10px;
+        background-color: #9DA8E4;
+    } 
+
+    .box8 .big1 h2 {
+        font-size: 32px;
+        color: #fff;
+        padding-top: 20px;
+        padding-left: 10%;
+        
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
 
     /* 1290px 이상구간설정 */
     /* @media(min-width:1290px){

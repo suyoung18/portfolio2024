@@ -65,13 +65,20 @@ $('.btn').children('li').click(function(){
     let interval = setInterval(callback, 3000);
 
 
-    
+  //     function changeConsoleOutput(i) {
+  //     i++
+
+  //     var i = $(this).index()
+
+  //     printToConsole = function() {
+  //         console.log(t);
+  //     }
+  // }
 
 
     function callback() {
         // console.log('a');
         ee++
-
     
         if(ee>4)ee=1 
         console.log(ee)
@@ -91,59 +98,6 @@ $('.btn').children('li').click(function(){
 
 
 
-    // $('.btn li').ep(ee).addClass('yo')
-
-    // var intervalId = setInterval(function() {
-    //     // console.log("Hello, World!");
-
-    //     ee++
-
-    
-    // if(ee>3)ee=0 
-    // console.log(ee)
-
-    //     // var i = $(this).index()
-    //     $('.btn').children('li').removeClass('yo')
-
-
-
-    //     $('.box2').css({'background-image': 'url(img/slide'+ee+'.jpg)'});
-    //     // $(this).addClass('yo')
-    //     // $('.btn').children('li').addClass('yo')
-
-
-
-
-
-    //   }, 1000);
-
-
-
-
-
-    //    var intervalId = clearInterval(function() {
-
-
-        // $('.btn1').children('i').click()
-
-
-    //    })
-
-    // const btnStart = document.getElementsByClassName("noa");
-    // const btnStop = document.getElementsByClassName("no");
-
-    // btnStart.onclick = function () {
-    //     // 기존에 있던 setInterval 없애고
-    //     clearInterval(interval);
-    
-    //     interval = setInterval(startTimer, 10);
-    //   };
-    
-    //   btnStop.onclick = function () {
-    //     clearInterval(interval);
-    //   };
-    
-
 
     $('.btn1 div').eq(0).click(function(){
 
@@ -162,24 +116,7 @@ $('.btn').children('li').click(function(){
     })
 
 
-//     let interval = setInterval(callback, 1000);
 
-// function callback() {
-// 	console.log('a');
-// }
-
-
-    // $('.btn1').click(function(){
-
-    //     $('.btn1').children('a').removeClass('no')
-
-    //     console.log(intervalId);
-    //     $('.btn1').eq(0).addClass('no')
-
-    // })
-
-
-    // clearInterval(intervalId);
     
 $('.aww').children('li').not('.arr').css({'border-bottom':'1px solid #000'});
 

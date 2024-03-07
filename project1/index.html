@@ -20,84 +20,7 @@
 <script src="js/js.js"></script>
 <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 
-<!-- 자바스트립트 
-        <script>
-            $(function(){
-                $('.ex1').children('li').not('.li02').css({'border-right':'2px solid #747474'});
-                
-                // 클릭한 나자신에게 색깔변경
-            $('.btn').children('li').click(function(){
 
-            // 실행문
-            $('.btn').children('li').removeClass('yo')
-            $(this).addClass('yo')
-            });
-                
-            $('.aww').children('li').not('.arr').css({'border-bottom':'1px solid #000'});
-            
-            
-
-
-
-            // titleBox 의 li의 순번찾기
-            $('.titleBox li').click(function(){
-
-            // 클릭한나 자신의 순번을 변수로 지정하기
-
-            var i = $(this).index()
-            // 콘솔에 확인하기
-            console.log(i)
-            // 찾아낸순번을 listBox안의 div의 순서에 맞게 보이기
-            $('.box3-2>div').css({'display':'none'})
-            $('.box3-2>div').eq(i).css({'display':'block'})
-
-            $('.titleBox li').removeClass('on')
-
-            // 클릭한 나자신에게 클래스'on 값 더하기
-            $(this).addClass('on')
-            });
-
-            
-
-
-            $('.left').children('i').click(function(){
-
-// 실행문
-$('.listBox1').children('ul').css({'left':'-416px'})
-
-})
-
-
-
-$('.right').children('i').click(function(){
-
-// 실행문
-$('.listBox1').children('ul').css({'left':'416px'})
-});
-            
-
-            })
-
-
-
-
-        </script>-->
-<!--
-$('.left').children('i').click(function(){
-
-// 실행문
-$('.listBox1').children('ul').css({'left':'-416px'})
-
-});
-
-
-
-$('.right').children('i').click(function(){
-
-// 실행문
-$('.listBox1').children('ul').css({'right':'416px'})
-
-}); -->
 
 </head>
 <body>
@@ -224,9 +147,9 @@ $('.listBox1').children('ul').css({'right':'416px'})
             </div>
     
     
-            <div class="box3-2">
-                <div class="listBox">
-                <ul class="aww"> 
+        <div class="box3-2">
+            <div class="listBox">
+                <ul class="aww bww"> 
                     <li>
                         <p>재무 보고서</p> 
                         <p>NASA의 연간 재무 보고서</p>
@@ -266,32 +189,32 @@ $('.listBox1').children('ul').css({'right':'416px'})
             <div class="listBox">
                 <ul class="aww"> 
                     <li>
-                        <p>재무 보고서4142</p> 
-                        <p>NASA의 연간 재무 보고서</p>
+                        <p>지금 달에서</p> 
+                        <p>집보내달라고 시위중인 로봇들</p>
                         <p>YYYY.MM.DD</p>
                     </li>
     
                     <li>
                         <p>2024예산요청</p>
-                        <p>2024 회계연도 예산 요청</p>
+                        <p>2025년을 믿는다고 하며 예산 플렉스</p>
                         <p>YYYY.MM.DD</p>
                     </li>
     
                     <li>
                         <p>이전 예산 요청</p>
-                        <p>2003 회계연도 예산 요청</p>
+                        <p>2003 회계연도 예산에 닌텐도3DS 구매의혹</p>
                         <p>YYYY.MM.DD</p>
                     </li>
     
                     <li>
                         <p>성적증명서 요청</p>
-                        <p>2023년보고서 및 성적증명서</p>
+                        <p>나사도 초등학교때는 F였다</p>
                         <p>YYYY.MM.DD</p>
                     </li>
     
                     <li class="arr">
                         <p>2023 예산요청</p>
-                        <p>2023년보고서 및 성적증명서</p>
+                        <p>2023년보고서 및 성적증명서 작성 안했다</p>
                         <p>YYYY.MM.DD</p>
                     </li>
                 </ul>
@@ -355,96 +278,6 @@ $('.listBox1').children('ul').css({'right':'416px'})
                         <div id="datepicker">
 
                         </div>
-
-
-
-                        <!-- <form class="eto">
-                            <div class="date">
-                                <label for="date">날짜 :</label>
-                                <input type="text" id="date" placeholder="날짜를 선택해주세요" >
-                    
-                                <div class="cal001">
-                        <h2>2023년 11월</h2>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>일</th>
-                                    <th>월</th>
-                                    <th>화</th>
-                                    <th>수</th>
-                                    <th>목</th>
-                                    <th>금</th>
-                                    <th>토</th>
-                                </tr>
-                            </thead>
-                    
-                            <tbody>
-                                <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td>1</td>
-                                    <td>2</td>
-                                    <td>3</td>
-                                    <td>4</td>
-                                </tr>
-                            </tbody>
-                    
-                    
-                            <tbody>
-                                <tr>
-                                    <td>5</td>
-                                    <td>6</td>
-                                    <td>7</td>
-                                    <td>8</td>
-                                    <td>9</td>
-                                    <td>10</td>
-                                    <td>11</td>
-                                </tr>
-                            </tbody>
-                    
-                    
-                            <tbody>
-                                <tr>
-                                    <td>12</td>
-                                    <td>13</td>
-                                    <td>14</td>
-                                    <td>15</td>
-                                    <td>16</td>
-                                    <td>17</td>
-                                    <td>18</td>
-                                </tr>
-                            </tbody>
-                    
-                            <tbody>
-                                <tr>
-                                    <td>19</td>
-                                    <td>20</td>
-                                    <td>21</td>
-                                    <td>22</td>
-                                    <td>23</td>
-                                    <td>24</td>
-                                    <td>25</td>
-                                </tr>
-                            </tbody>
-                    
-                    
-                            <tbody>
-                                <tr>
-                                    <td>26</td>
-                                    <td>27</td>
-                                    <td>28</td>
-                                    <td>29</td>
-                                    <td>30</td>
-                                    <td>31</td>
-                                    <td></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    
-                    </div>
-                            </div>
-                        </form> -->
 
 <div class="tt00">
                                     <ul class="tep1">
@@ -512,6 +345,24 @@ $('.listBox1').children('ul').css({'right':'416px'})
                     <p>미래의 Artemis 임무를 위한 NASA Orion 승무원 
                         모듈을 위한 세 가지 환호</p>
                 </li>
+
+                <li>
+                    <img src="img/box4-1.png" alt="" width="414" height="292">
+                    <p>허블 우주 망원경이 촬영한 이 이미지를 
+                        가로지르는 해파리 은하 JO206의 모습입니다.</p>
+                </li>
+
+                <li>
+                    <img src="img/box4-2.png" alt="" width="414" height="292">
+                    <p>NASA의 Wallops에서 울리는 로켓을 타고 학생 
+                        실험이 비행합니다.</p>
+                </li>
+                
+                <li>
+                    <img src="img/box4-3.jpg" alt="" width="414" height="292">
+                    <p>미래의 Artemis 임무를 위한 NASA Orion 승무원 
+                        모듈을 위한 세 가지 환호</p>
+                </li>
             </ul>
         </div>
     <!-- onclick="prev()"  -->
@@ -526,38 +377,6 @@ $('.listBox1').children('ul').css({'right':'416px'})
   
     </div>
 
-
-    <!--  
-    <div class="box5">
-        <div class="title"></div>
-
-        <div class="txtList">
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </div>
-        <div class="imgBox">
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </div>
-        <div class="localMenu">
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </div>
-    </div>-->
 
 
     <div class="box6">

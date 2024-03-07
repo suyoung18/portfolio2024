@@ -103,6 +103,40 @@ $('.btn1').children('li').click(function(){
 
 
 
+        //  const slider = document.querySelector('.asd');
+        //  const slides = document.querySelectorAll('.box3_1');
+        //  const prev = document.querySelector('.left');
+        //  const next = document.querySelector('.right');
+        //  const slideWidth = slides[0].offsetWidth;
+     
+        //  let currentIndex = 0;
+     
+        //  function goToSlide(index) {
+        //      slider.style.transform = `translateX(-${index * slideWidth}px)`;
+        //      currentIndex = index;
+        //  }
+     
+        //  function slideNext() {
+        //      if (currentIndex < slides.length - 1) {
+        //          goToSlide(currentIndex + 1);
+        //      } else {
+        //          goToSlide(0);
+        //      }
+        //  }
+     
+        //  function slidePrev() {
+        //      if (currentIndex > 0) {
+        //          goToSlide(currentIndex - 1);
+        //      } else {
+        //          goToSlide(slides.length - 1);
+        //      }
+        //  }
+     
+        //  next.addEventListener('click', slideNext);
+        //  prev.addEventListener('click', slidePrev);
+
+
+
          $('.box4_1 p').click(function(){
 
             let i = $(this).index()
@@ -290,11 +324,22 @@ $('.move2').click(function(){
 
               $('.menu1 li').eq(1).click(function(){
                 
-                $('section').animate({'scrollTop':953},200)
+                $('section').animate({'scrollTop': (".box2") },200)
               });
 
 
-
+              // let resizeTimer;
+              // let isResize = false;
+              // $(window).on('resize', () => {
+              //     clearTimeout(resizeTimer);
+              //     isResize = true;
+              //     resizeTimer = setTimeout(function() {
+              //         $fixedBox.css({ 'position': 'absolute', 'top': '0' });
+              //         initialTop = $fixedBox.offset().top;
+              //         isResize = false;
+              //         updatePosition();
+              //     }, 100);
+              // });
 
 
 

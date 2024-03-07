@@ -44,6 +44,46 @@ $('.btn li').click(function(){
         
     });
 
+
+
+    $('.menubtn').mouseenter(function(){
+
+        console.log(i);
+
+    
+        $('.menuA').addClass('no')
+    
+    });
+    $('.menuA').mouseleave(function(){
+    
+        
+    
+        
+        $('.menuA').removeClass('no')
+    
+    });
+
+
+    $('.globe').mouseenter(function(){
+
+    
+
+    
+        $('.menuB').addClass('no')
+    
+    });
+    $('.menuB').mouseleave(function(){
+    
+        
+    
+        
+        $('.menuB').removeClass('no')
+    
+    });
+
+
+
+
     $('.box1').mouseenter(function(){
     
 
